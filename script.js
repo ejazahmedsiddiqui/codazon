@@ -1,2 +1,6 @@
-const x = document.getElementById("click-open-more-navbar").innerHTML;
-console.log(x);
+  function showMenu(menuId) {
+    document.querySelectorAll('.menu').forEach(menu => {
+      menu.classList.remove('active');
+    });
+    document.getElementById(menuId).classList.add('active');
+  }

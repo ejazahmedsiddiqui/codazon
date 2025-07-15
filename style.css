@@ -1,113 +1,84 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
-ul{
-    list-style-type: none;
-}
-body{
-    background-color: rgb(60,99,84);
+
+body {
+    /* background-image: url("./assets/home-bg.jpg"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #3a6051;
+    /* Account for fixed navbar */
 }
 
-.heading-1{
-    color:black;
-    text-decoration: solid;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
+ul {
+    list-style: none;
 }
 
-h1{
-    text-align: center;
+.navbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    background-color: #153528;
+    align-items: center;
 }
-.nav-list{
+
+.navbar .nav-navbar .container {
+    border: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
     display: flex;
-    flex-direction: row;
-   
-}
-.navbar{
-    display: flex;
-    flex-direction: row;
-}
-.navbar-list-item{
-    width: max-content;
-    height: max-content;
-    font-size:30px;
-    padding: 0px 10px 0px;
-    text-align: center;
-     height: 40px;
-    width: auto;
-}
-.navbar-list-item img{
-    width: 175px;
-    height: 50px;
-}
-#item-1{
-    background-color: hsla(0, 32%, 45%, 0.456);
-}
-#item-2{
-    background-color: hsla(0, 100%, 50%, 0.456);
-}
-#item-3{
-    background-color: hsla(75, 100%, 49%, 0.456);
-}
-#item-4{
-    background-color: hsla(138, 100%, 25%, 0.456);
-}
-#item-5{
-    background-color: hsla(246, 100%, 46%, 0.456);
-}
-#item-6{
-    background-color: hsla(292, 100%, 47%, 0.456);
-}
-#item-7{
-    background-color: hsla(0, 0%, 0%, 0.456);
-}
-#item-8{
-    background-color: hsla(0, 0%, 100%, 0.456);
-}
-#item-9{
-    background-color: hsla(150, 95%, 15%, 0.456);
-}
-#item-10{
-    background-color: hsla(83, 82%, 19%, 0.456);
-}
-#item-11{
-    background-color: hsla(32, 100%, 45%, 0.456);
+    justify-content: space-between;
+    align-items: center;
 }
 
-.navbar-list-item a{
+.navbar .container .right-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+  width: 16.66667%;
+  float:left;
+  margin:0 0 10px 40px;
+  max-width:50%;
+  position:relative;
+  z-index:5
+}
+.logo img {
+  display:block;
+  height:auto
+}
+img {
+  max-width:100%;
+  height:auto;
+  border:0
+}
+
+.navbar .nav-navbar .container  .left-navbar.menu{
+    display: none;
+}
+
+.navbar  .nav-navbar .container .left-navbar.menu.active {
+    display: flex;
+    padding-top: 0px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.navbar a {
     text-decoration: none;
     color: white;
-
-}
-.navbar-list-item a:hover{
-    color: hsl(60, 72%, 61%);
+    padding: 10px;
 }
 
-main{
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.footer .footer-text{
-    text-align: left;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: blue;
-}
-
-.footer .footer-heading{
-    text-align: left ;
-    font-weight: bold;
-}
-
-.footer-bottom-content{
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    color: aliceblue;
-}
-
-hr{
-    margin: 10px;
-    font-weight: 700;
+.navbar ul {
+    display: flex;
 }
