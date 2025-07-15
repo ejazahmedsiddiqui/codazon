@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codzone Navbar - Improved</title>
+    <link rel="styleSheet" href="styleClaude.css" />
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="./assets/logo-insidehome-white.png" alt="Codzone Home" />
+            </div>
+
+            <ul id="menuA" class="nav-menu" role="menubar">
+                <li role="none"><a href="#" role="menuitem">Furniture</a></li>
+                <li role="none"><a href="#" role="menuitem">Mattresses</a></li>
+                <li role="none"><a href="#" role="menuitem">Categories</a></li>
+                <li role="none"><a href="#" role="menuitem">Renovation</a></li>
+                <li role="none"><a href="#" role="menuitem">Lighting & Rugs</a></li>
+                <li role="none"><a href="#" role="menuitem">Décor & Pillows</a></li>
+            </ul>
+
+            <ul id="menuB" class="nav-menu hidden" role="menubar">
+                <li role="none"><a href="#" role="menuitem">Bed & Bath</a></li>
+                <li role="none"><a href="#" role="menuitem">Our Blog</a></li>
+                <li role="none"><a href="#" role="menuitem">Contact Us</a></li>
+                <li role="none"><a href="#" role="menuitem">Home Ideas</a></li>
+            </ul>
+
+            <div class="menu-toggle">
+                <button class="menu-btn" onclick="toggleMenus()" aria-label="Switch between menus">
+                    <i class="fa-solid fa-arrow-right icon"></i>
+                </button>
+            </div>
+
+            <div class="right-navbar">
+                <ul>
+                    <li><a href="#" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    <li><a href="#" aria-label="User account"><i class="fa-solid fa-circle-user"></i></a></li>
+                    <li><a href="#" aria-label="Shopping cart"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                </ul>
+            </div>
+
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content" class="content">
+        <h1>Welcome to Codzone</h1>
+        <p>Your premier destination for home furniture and décor. Browse our extensive collection of high-quality furniture, mattresses, lighting, rugs, and home accessories to create your perfect living space.</p>
+    </main>
+
+    <script src="scriptClaude.js">
+    </script>
+    <script src="https://kit.fontawesome.com/3e27766942.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
