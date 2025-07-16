@@ -3,10 +3,536 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Progressive Responsive Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .left-menu {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+            border-radius: 16px;
+            position: relative;
+            max-width: 1600px;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+        }
+
+        .logo {
+            display: inline-block;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #4a5568;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            filter: brightness(0.8);
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+
+        .menu-items {
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .menu-items a {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.8rem 1.2rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: block;
+            white-space: nowrap;
+        }
+
+        .menu-items a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .menu-items a:hover::before {
+            left: 100%;
+        }
+
+        .menu-items a:hover {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .menu-toggle {
+            display: none;
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            z-index: 1001;
+        }
+
+        .menu-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .menu-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .menu-btn:active {
+            transform: scale(0.95);
+        }
+
+        .icon {
+            transition: transform 0.3s ease;
+        }
+
+        .menu-btn.active .icon {
+            transform: rotate(180deg);
+        }
+
+        .burger-menu {
+            display: none;
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            z-index: 1001;
+        }
+
+        .burger-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border: none;
+            border-radius: 8px;
+            width: 50px;
+            height: 50px;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .burger-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-radius: 0 0 16px 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            z-index: 999;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            display: block;
+            max-height: 500px;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 1rem;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+            opacity: 0;
+            transform: translateX(30px);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu.active li {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .mobile-menu li:nth-child(1) { transition-delay: 0.1s; }
+        .mobile-menu li:nth-child(2) { transition-delay: 0.2s; }
+        .mobile-menu li:nth-child(3) { transition-delay: 0.3s; }
+        .mobile-menu li:nth-child(4) { transition-delay: 0.4s; }
+        .mobile-menu li:nth-child(5) { transition-delay: 0.5s; }
+        .mobile-menu li:nth-child(6) { transition-delay: 0.6s; }
+        .mobile-menu li:nth-child(7) { transition-delay: 0.7s; }
+        .mobile-menu li:nth-child(8) { transition-delay: 0.8s; }
+        .mobile-menu li:nth-child(9) { transition-delay: 0.9s; }
+        .mobile-menu li:nth-child(10) { transition-delay: 1s; }
+
+        .mobile-menu a {
+            display: block;
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            transform: translateX(10px);
+        }
+
+        /* Animation classes */
+        .fade-out {
+            opacity: 0 !important;
+            transform: translateX(30px) !important;
+            pointer-events: none !important;
+        }
+
+        .fade-in {
+            opacity: 1 !important;
+            transform: translateX(0) !important;
+            pointer-events: auto !important;
+        }
+
+        /* Responsive breakpoints */
+        @media (max-width: 1600px) {
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .left-menu {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .menu {
+                width: 100%;
+                justify-content: flex-start;
+                margin-top: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+            }
+            
+            .menu-toggle {
+                display: none;
+            }
+            
+            .burger-menu {
+                display: block;
+            }
+            
+            .left-menu {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        .demo-info {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            max-width: 1600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .demo-info h3 {
+            color: #4a5568;
+            margin-bottom: 1rem;
+        }
+
+        .demo-info p {
+            color: #6a7581;
+            margin-bottom: 0.5rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Contact Page</h1>
-    
+    <div class="left-menu">
+        <span class="logo">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 50'%3E%3Ctext x='10' y='35' font-family='Arial, sans-serif' font-size='24' font-weight='bold' fill='%23667eea'%3EInsideHome%3C/text%3E%3C/svg%3E" alt="Home" />
+        </span>
+        <ul class="menu" id="menuA">
+            <li class="menu-items">
+                <a href="#">Furniture</a>
+            </li>
+            <li class="menu-items">
+                <a href="#">Mattresses</a>
+            </li>
+            <li class="menu-items">
+                <a href="#">Categories</a>
+            </li>
+            <li class="menu-items">
+                <a href="#">Renovation</a>
+            </li>
+            <li class="menu-items">
+                <a href="#">Lighting & Rugs</a>
+            </li>
+            <li class="menu-items">
+                <a href="#">Decor & Pillows</a>
+            </li>
+            <li class="menu-items">
+                <a href="#">Bed & Bath</a>
+            </li>
+            <li class="menu-items">
+                <a href="#">Our Blog</a>
+            </li>
+            <li class="menu-items">
+                <a href="#">Contact Us</a>
+            </li>
+            <li class="menu-items">
+                <a href="#">Home Ideas</a>
+            </li>
+        </ul>
+        <div class="menu-toggle">
+            <button class="menu-btn" onclick="toggleMenus()" aria-label="Switch between menus">
+                <i class="fa-solid fa-arrow-right icon" id="icon"></i>
+            </button>
+        </div>
+        <div class="burger-menu">
+            <button class="burger-btn" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="#">Furniture</a></li>
+                <li><a href="#">Mattresses</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Renovation</a></li>
+                <li><a href="#">Lighting & Rugs</a></li>
+                <li><a href="#">Decor & Pillows</a></li>
+                <li><a href="#">Bed & Bath</a></li>
+                <li><a href="#">Our Blog</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Home Ideas</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="demo-info">
+        <h3>Responsive Behavior Demo</h3>
+        <p><strong>Above 1600px:</strong> Shows first 6 items, toggle button appears</p>
+        <p><strong>1600px - 992px:</strong> Items hide progressively, toggle button switches views</p>
+        <p><strong>992px - 768px:</strong> Menu items move below logo in a row</p>
+        <p><strong>Below 768px:</strong> Burger menu appears, all items in dropdown</p>
+        <p><strong>Toggle Menu:</strong> Click the arrow button to switch between visible/hidden items</p>
+    </div>
+
+    <script>
+        let isToggled = false;
+        let visibleItems = [];
+        let hiddenItems = [];
+
+        function getVisibleItemsCount() {
+            const screenWidth = window.innerWidth;
+            
+            if (screenWidth > 1600) {
+                return 6;
+            } else if (screenWidth > 1400) {
+                return 5;
+            } else if (screenWidth > 1200) {
+                return 4;
+            } else if (screenWidth > 992) {
+                return 3;
+            } else if (screenWidth > 850) {
+                return 2;
+            } else if (screenWidth > 768) {
+                return 1;
+            } else {
+                return 0; // Mobile view
+            }
+        }
+
+        function updateMenuItems() {
+            const menuItems = Array.from(document.querySelectorAll('.menu-items'));
+            const visibleCount = getVisibleItemsCount();
+            
+            // Reset all items
+            menuItems.forEach(item => {
+                item.style.display = 'block';
+                item.classList.remove('fade-out', 'fade-in');
+            });
+
+            if (visibleCount === 0) {
+                // Mobile view - hide all menu items
+                menuItems.forEach(item => {
+                    item.style.display = 'none';
+                });
+                return;
+            }
+
+            // Split items into visible and hidden arrays
+            visibleItems = menuItems.slice(0, visibleCount);
+            hiddenItems = menuItems.slice(visibleCount);
+
+            // Initially show visible items and hide hidden items
+            if (!isToggled) {
+                visibleItems.forEach(item => {
+                    item.style.display = 'block';
+                    item.classList.remove('fade-out');
+                    item.classList.add('fade-in');
+                });
+                
+                hiddenItems.forEach(item => {
+                    item.style.display = 'none';
+                });
+            } else {
+                // If toggled, show hidden items and hide visible items
+                visibleItems.forEach(item => {
+                    item.style.display = 'none';
+                });
+                
+                hiddenItems.forEach(item => {
+                    item.style.display = 'block';
+                    item.classList.remove('fade-out');
+                    item.classList.add('fade-in');
+                });
+            }
+        }
+
+        function toggleMenus() {
+            const toggleBtn = document.querySelector('.menu-btn');
+            
+            if (!isToggled) {
+                // Hide visible items with staggered animation
+                visibleItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.classList.remove('fade-in');
+                        item.classList.add('fade-out');
+                    }, index * 100);
+                });
+                
+                // After visible items are hidden, show hidden items
+                setTimeout(() => {
+                    visibleItems.forEach(item => {
+                        item.style.display = 'none';
+                    });
+                    
+                    hiddenItems.forEach((item, index) => {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.classList.remove('fade-out');
+                            item.classList.add('fade-in');
+                        }, index * 150);
+                    });
+                }, visibleItems.length * 100 + 300);
+                
+                toggleBtn.classList.add('active');
+                isToggled = true;
+            } else {
+                // Hide hidden items with staggered animation
+                hiddenItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.classList.remove('fade-in');
+                        item.classList.add('fade-out');
+                    }, index * 100);
+                });
+                
+                // After hidden items are hidden, show visible items
+                setTimeout(() => {
+                    hiddenItems.forEach(item => {
+                        item.style.display = 'none';
+                    });
+                    
+                    visibleItems.forEach((item, index) => {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.classList.remove('fade-out');
+                            item.classList.add('fade-in');
+                        }, index * 150);
+                    });
+                }, hiddenItems.length * 100 + 300);
+                
+                toggleBtn.classList.remove('active');
+                isToggled = false;
+            }
+        }
+
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+
+        function init() {
+            isToggled = false;
+            const toggleBtn = document.querySelector('.menu-btn');
+            if (toggleBtn) {
+                toggleBtn.classList.remove('active');
+            }
+            updateMenuItems();
+        }
+
+        // Initialize on load and resize
+        window.addEventListener('load', init);
+        window.addEventListener('resize', () => {
+            init();
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const burgerBtn = document.querySelector('.burger-btn');
+            
+            if (mobileMenu && burgerBtn && !mobileMenu.contains(event.target) && !burgerBtn.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>

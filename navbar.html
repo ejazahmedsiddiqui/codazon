@@ -4,158 +4,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Codzone Navbar</title>
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
-
-        body {
-            /* background-image: url("./assets/home-bg.jpg"); */
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #3a6051;
-            /* Account for fixed navbar */
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        .navbar {
-            top: 0;
-            left: 0;
-            right: 0;
-            height: auto;
-            background-color: #153528;
-            align-items: center;
-        }
-
-        .navbar .nav-navbar .container {
-            border: 0;
-            padding-top: 30px;
-            padding-bottom: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .navbar .container .right-navbar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .logo {
-            width: 16.66667%;
-            float: left;
-            margin: 0 0 10px 40px;
-            max-width: 50%;
-            position: relative;
-            z-index: 5
-        }
-
-        .logo img {
-            display: block;
-            height: auto
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border: 0
-        }
-
-        .navbar .nav-navbar .container .left-navbar.menu {
-            display: none;
-        }
-
-        .navbar .nav-navbar .container .left-navbar.menu.active {
-            display: flex;
-            padding-top: 0px;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            color: white;
-            padding: 10px;
-        }
-
-        .navbar ul {
-            display: flex;
-        }
-    </style>
-
+    <title>Document</title>
+    <link rel="styleSheet" href="style.css" />
 </head>
 
 <body>
 
-    <div class="navbar">
-
-        <nav class="nav-navbar">
-
-            <div class="container">
+    <nav class="navbar">
+        <div class="container">
+            <div class="left-menu">
                 <span class="logo"><img src="./assets/logo-insidehome-white.png" alt="Home" /></span>
-
-                <div id="menuA" class="left-navbar menu active">
-
-
-                    <!-- MENU 1 ACTIVE -->
-                    <ul>
-                        <li><a href="#">Furniture</a></li>
-                        <li><a href="#">Mattresses</a></li>
-                        <li><a href="#">Categories</a></li>
-                        <li><a href="#">Renovation</a></li>
-                        <li><a href="#">Lighting & Rugs</a></li>
-                        <li><a href="#">Décor & Pillows</a></li>
-                    </ul>
-                    <!-- MENU 1 ACTIVE -->
-                </div>
-
-                <div id="menuB" class="left-navbar menu">
-                    <!-- MENU 2 HIDDEN -->
-                    <ul>
-                        <li><a href="#">Bed & Bath</a></li>
-                        <li><a href="#">Our Blog</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Home Ideas</a></li>
-                    </ul>
-                    <!-- MENU 2 HIDDEN -->
-                </div>
-
-                <div class="show-hidden">
-                    <button onclick="showMenu('menuA')">Active</button>
-                    <button onclick="showMenu('menuB')">Hidden</button>
-                </div>
-                <div class="right-navbar">
-                    <ul>
-                        <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                        <li><a href="#"><i class="fa-solid fa-circle-user"></i></a></li>
-                        <li><a href="#"><i class="fa-solid fa-bag-shopping"></i></a></li>
-                        <li><a href="#"><i class="fa-solid fa-bars"></i></a></li>
-                    </ul>
+                <ul class="menu" id="menuA">
+                    <li class="menu-items">
+                        <a href="#">Furniture</a>
+                    </li>
+                    <li class="menu-items">
+                        <a href="#">Mattresses</a>
+                    </li>
+                    <li class="menu-items">
+                        <a href="#">Categories</a>
+                    </li>
+                    <li class="menu-items">
+                        <a href="#">Renovation</a>
+                    </li>
+                    <li class="menu-items">
+                        <a href="#">Lighting & Rugs</a>
+                    </li>
+                    <li class="menu-items">
+                        <a href="#">Decor & Pillows</a>
+                    </li>
+                </ul>
+                <ul class="menu hidden" id="menuB">
+                    <li class="menu-items">
+                        <a href="#">Bed & Bath</a>
+                    </li>
+                    <li class="menu-items">
+                        <a href="#">Our Blog</a>
+                    </li>
+                    <li class="menu-items">
+                        <a href="#">Contact Us</a>
+                    </li>
+                    <li class="menu-items">
+                        <a href="#">Home Ideas</a>
+                    </li>
+                </ul>
+                <div class="menu-toggle">
+                    <!-- <p>Toggle</p> -->
+                    <button class="menu-btn" onclick="toggleMenus()" aria-label="Switch between menus">
+                        <i class="fa-solid fa-arrow-right icon" id="icon"></i>
+                    </button>
                 </div>
             </div>
-        </nav>
-    </div>
-    <script>
-        function showMenu(menuId) {
-            document.querySelectorAll('.menu').forEach(menu => {
-                menu.classList.remove('active');
-            });
-            document.getElementById(menuId).classList.add('active');
-        }
-    </script>
-    <script src="https://kit.fontawesome.com/3e27766942.js" crossorigin="anonymous"></script>
+            <div class="icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <button class="">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
 
+    <!-- INDEX TOP DETAILS -->
+    <div class="index1">
+        <div class="container">
+            <div class="top-details">
+                <div class="index-heading">
+                    <h1>Create a home that defines you</h1>
+                </div>
+                <div class="top-information">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer interdum
+                    sem
+                    ac magna. Integer in lectus sed ligula commodo commodo. In molestie. Lorem ipsum dolor sit amet,
+                    consectetuer adipiscing elit. Integer interdum sem ac magna.
+
+                </div>
+                <div class="top-button">
+                    <div class="top-button-start">
+                        <button>Get Started</button>
+                    </div>
+                    <div class="top-button-products">
+                        <button>See our products</button>
+                    </div>
+                </div>
+            </div>
+            <div class="top-images">
+                <div class="image1 image-responsive">
+                    <a href="#">
+                        <img src="./assets/banner01.jpg" alt="image1">  
+                    </a>
+                </div>
+                <div class="image2 image-responsive">
+                    <a href="#">
+                        <img src="./assets/banner02.jpg" alt="image2">
+                    </a>
+                </div>
+                <div class="image3 image-responsive">
+                    <a href="#">
+                        <img src="./assets/banner03.jpg" alt="image3">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/3e27766942.js" crossorigin="anonymous"></script>
 
 </body>
 
