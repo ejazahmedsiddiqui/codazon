@@ -38,7 +38,7 @@ ul {
 
 .logo:hover {
     transform: scale(1.05);
-    background-color:#2944498a;
+    background-color: #2944498a;
     border-radius: 7px;
     padding: 30px 10px 30px 10px;
     cursor: pointer;
@@ -62,7 +62,7 @@ img {
 .container {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0px;
 }
 
 .navbar {
@@ -210,18 +210,42 @@ img {
     color: #8f9925;
 }
 
+.navbar-footer {
+    border: none;
+    background-color: transparent;
+}
+
 
 /* INDEX TOP DETAILS */
 .content {
     padding-top: 10px;
-    background-color: #3a6051;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
 }
 
 .content .container {
-    display: flex;   
+    display: flex;
     position: relative;
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
+}
+.banner-style37 {
+    --title-color:#ffffff;
+    overflow:hidden;
+    position:relative;
+    max-width:1600px;
+    margin:0 auto
+  }
+.banner-style37:before {
+    background-color: #fff;
+    width: 150%;
+    height: 50%;
+    position: absolute;
+    bottom: -21%;
+    left: -40%;
+    content: '';
+    z-index: 1;
+    transform: rotate(10deg)
 }
 .content-section {
     flex: 1;
@@ -268,42 +292,42 @@ img {
 }
 
 .btn-primary {
-    display:inline-block;
-    padding:10px 20px;
-    font-size:16px;
-    border-radius:3px;
-    font-weight:600;
-    transition:all 500ms ease;
-    backface-visibility:hidden;
-    border:2px solid;
-    color:#000000;
-    border-color:#e6d233;
-    background:#e6d233
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    font-weight: 600;
+    transition: all 500ms ease;
+    backface-visibility: hidden;
+    border: 2px solid;
+    color: #000000;
+    border-color: #e6d233;
+    background: #e6d233
 }
 
 .btn-primary:hover {
-    color:#ffffff;
-    border-color:#000000;
-    background:#000000
+    color: #ffffff;
+    border-color: #000000;
+    background: #000000
 }
 
 .btn-secondary {
-    display:inline-block;
-    padding:10px 20px;
-    font-size:16px;
-    border-radius:3px;
-    font-weight:600;
-    transition:all 500ms ease;
-    backface-visibility:hidden;
-    border:2px solid #e6d233;
-    color:#ffffff;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    font-weight: 600;
+    transition: all 500ms ease;
+    backface-visibility: hidden;
+    border: 2px solid #e6d233;
+    color: #ffffff;
     background: #3a6051;
 }
 
 .btn-secondary:hover {
-    color:#ffffff;
-    border-color:#000000;
-    background:#000000
+    color: #ffffff;
+    border-color: #000000;
+    background: #000000
 }
 
 /* Stats Section - Stair Design */
@@ -316,9 +340,8 @@ img {
 }
 
 .stat-item {
-    color: white;
+    color: black;
     padding: 25px 20px;
-    backdrop-filter: blur(10px);
     position: relative;
     min-width: 120px;
     text-align: center;
@@ -346,7 +369,7 @@ img {
 
 .stat-label {
     font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 0, 0, 0.9);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     line-height: 1.3;
@@ -359,7 +382,6 @@ img {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 1fr 1fr; */
     gap: 10px;
 }
 
@@ -374,6 +396,7 @@ img {
     object-fit: contain;
     transition: transform 0.3s ease;
 }
+
 .image-container img.big-banner {
     width: 100%;
     height: 100%;
@@ -389,17 +412,7 @@ img {
     grid-column: 1 / -1;
 }
 
-/* Diagonal overlay effect */
-.diagonal-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #3a6051;
-    z-index: 1;
-    pointer-events: none;
-}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -445,6 +458,7 @@ img {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -470,90 +484,36 @@ img {
     animation-delay: 0.6s;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-.index1 {
-    background-color: #3a6051;
+/* TABLE AND CHAIR */
+.discouts {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    clear: both;
 }
 
-.index1 .container {
-
+.discouts .container {
+    z-index: 1000;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-}
-
-.index1 .container .top-details {
-    display: flex;
     justify-content: space-between;
-    align-items: left;
-    flex-direction: column;
-    padding-left: 20%;
-    padding-right: 10%;
-    padding-bottom: 30px;
 }
 
-.index1 .container .top-details .index-heading {
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    font-size: 450%;
-    font-weight: 50;
-    margin-bottom: 20px;
-}
-
-.index1 .container .top-details .top-information {
-
-    font-family: 'Poppins', sans-serif;
-
-}
-
-
-.image-responsive {
-    animation: fadeIn 0.6s ease-out;
-    transition: all 500ms ease;
-    backface-visibility: hidden;
-    display: block;
-    max-width: 100%;
-    height: auto
-}
-
-.image-responsive a img:hover {
-     transition: all 500ms ease; 
-    transform: scale(1.1);
-    overflow: hidden;
-}
-
-.image-responsive a img {
-    transition: all 500ms ease;
-    backface-visibility: hidden;
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-.index1 .container .top-images{
-
+.cd-left,
+.cd-right {
+    z-index: 1000;
+    flex: 1 1 0;
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
-} */
+.cd-left {
+    background-color: #cad1c9;
+}
+
+.cd-right {
+    background-color: #eddecb;
+}
