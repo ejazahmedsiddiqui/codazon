@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="styleSheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 </head>
 
 <body>
@@ -13,38 +15,39 @@
     <nav class="navbar">
         <div class="container">
             <div class="left-menu">
-                <span class="logo"><a href="#"><img src="./assets/logo-insidehome-white.png" alt="Home" /></a></span>
+                <span class="logo"><a href="navbar.html"><img src="./assets/logo-insidehome-white.png"
+                            alt="Home" /></a></span>
                 <ul class="menu" id="menuA">
-                    <li class="menu-items"><a href="#">Furniture</a>
+                    <li class="menu-items"><a href="navbar.html">Furniture</a>
                     </li>
                     <li class="menu-items">
-                        <a href="#">Mattresses</a>
+                        <a href="navbar.html">Mattresses</a>
                     </li>
                     <li class="menu-items">
-                        <a href="#">Categories</a>
+                        <a href="navbar.html">Categories</a>
                     </li>
                     <li class="menu-items">
-                        <a href="#">Renovation</a>
+                        <a href="navbar.html">Renovation</a>
                     </li>
                     <li class="menu-items">
-                        <a href="#">Lighting & Rugs</a>
+                        <a href="navbar.html">Lighting & Rugs</a>
                     </li>
                     <li class="menu-items">
-                        <a href="#">Decor & Pillows</a>
+                        <a href="navbar.html">Decor & Pillows</a>
                     </li>
                 </ul>
                 <ul class="menu hidden" id="menuB">
                     <li class="menu-items">
-                        <a href="#">Bed & Bath</a>
+                        <a href="navbar.html">Bed & Bath</a>
                     </li>
                     <li class="menu-items">
-                        <a href="#">Our Blog</a>
+                        <a href="navbar.html">Our Blog</a>
                     </li>
                     <li class="menu-items">
-                        <a href="#">Contact Us</a>
+                        <a href="navbar.html">Contact Us</a>
                     </li>
                     <li class="menu-items">
-                        <a href="#">Home Ideas</a>
+                        <a href="navbar.html">Home Ideas</a>
                     </li>
                 </ul>
                 <div class="menu-toggle">
@@ -70,23 +73,23 @@
         <div class="container">
             <!-- Left Content Section -->
             <div class="content-section">
-                <h1 class="main-title">
-                    Create a home that<br>
-                    defines who you are
-                </h1>
+                <div class="item-content">
+                    <h1 class="main-title">
+                        Create a home that defines who you are
+                    </h1>
 
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer interdum sem ac magna.
-                    Integer in lectus sed ligula commodo commodo. In molestie. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit. Integer interdum sem ac magna.
-                </p>
-
-                <div class="button-group">
-                    <a href="#" class="btn btn-primary">Get started</a>
-                    <a href="#" class="btn btn-secondary">See our product</a>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer interdum sem ac magna.
+                        Integer in lectus sed ligula commodo commodo. In molestie. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Integer interdum sem ac magna.
+                    </div>
+                    <div class="button-group">
+                        <a href="navbar.html" class="btn btn-primary">Get started</a>
+                        <a href="navbar.html" class="btn btn-secondary">See our product</a>
+                    </div>
                 </div>
 
-                <div class="stats">
+                <div class="stats item-content">
                     <div class="stat-item">
                         <div class="stat-number">2354+</div>
                         <div class="stat-label">Project<br>Finished</div>
@@ -115,24 +118,92 @@
                 </div>
             </div>
         </div>
-    </div>  
+    </div>
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top"></a>
+
 
 
 
     <!-- DISCOUNTS -->
-    <div class="discouts">
+
+    <div class="discount">
         <div class="container">
-            <div class="cd-left">
-                <img src="./assets/table_image.png" alt="table" />
-            </div>
-            <div class="cd-right">
-                <img src="./assets/grey-chair.png" alt="chair" />
+            <div class="wide space-bottom">
+                <div class="flex-grid row  no-margin">
+                    <div class="right-table column table1 no-padding" style="background-color: #cad1c9">
+                        <div class="banner-style38">
+                            <div class="scale-effect cdz-banner">
+                                <a href="navbar.html">
+                                    <img class="image-responsive" src="./assets/table_image.png" alt="table" />
+                                </a>
+                                <div class="abs-content">
+                                    <div class="item-content content-top text-start">
+                                        <div class="bc-title expanded">20% OFF</div>
+                                        <div class="bc-title expanded">Trending Sofa</div>
+                                        <div class="bc-desc">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer interdum
+                                            sem ac magna. </div>
+                                        <div class="bc-actions">
+                                            <a href="navbar.html" class="bc-btn">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left-table column table2 no-padding" style="background-color: #eddecb">
+                        <div class="banner-style38">
+                            <div class="scale-effect cdz-banner">
+                                <a href="navbar.html">
+                                    <img class="image-responsive" src="./assets/grey-chair.png" alt="chair" />
+                                </a>
+                                <div class="abs-content">
+                                    <div class="item-content content-top text-end">
+                                        <div class="bc-title expanded">20% OFF</div>
+                                        <div class="bc-title expanded">Trending Sofa</div>
+                                        <div class="bc-desc">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer interdum
+                                            sem ac magna. </div>
+                                        <div class="bc-actions">
+                                            <a href="navbar.html" class="bc-btn bc-btn2">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </div>
-    </div>
 
-    <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/3e27766942.js" crossorigin="anonymous"></script>
+        <!-- CATEGORIES -->
+        <div class="categories">
+            <div class="inner-container space-lg">
+                <div class="row">
+                    <div class="col-sm-24" style="margin-bottom: 40px;">
+                        <div class="cdz-block-title">
+                            <p class="b-caption">Categories</p>
+                            <p class="b-title h2">Shop by <span class="text-underline">Categories</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="category_slider" class="col-sm-24">
+                        <div class="cdz-slider base-slider wrapper-adv-style">
+                            <div class="cdz-block-content">
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="script.js"></script>
+        <script src="https://kit.fontawesome.com/3e27766942.js" crossorigin="anonymous"></script>
 
 </body>
 <!--             -->
