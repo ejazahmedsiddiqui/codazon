@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Codazon</title>
     <link rel="styleSheet" href="style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
 </head>
 
 <body>
-
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top"></a>
     <nav class="navbar">
         <div class="container">
             <div class="left-menu">
@@ -119,7 +120,6 @@
             </div>
         </div>
     </div>
-    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top"></a>
 
 
 
@@ -177,9 +177,12 @@
 
             </div>
         </div>
+    </div>
 
-        <!-- CATEGORIES -->
-        <div class="categories">
+
+    <!-- CATEGORIES -->
+    <div class="categories">
+        <div class="container">
             <div class="inner-container space-lg">
                 <div class="row">
                     <div class="col-sm-24" style="margin-bottom: 40px;">
@@ -190,22 +193,303 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div id="category_slider" class="col-sm-24">
-                        <div class="cdz-slider base-slider wrapper-adv-style">
-                            <div class="cdz-block-content">
-                              
+                    <div class="container">
+                        <div class="sub-container">
+                            <div class="slider-wrapper">
+                                <div class="slider">
+                                    <div class="slide">
+                                        <div class="furniture-card active">
+                                            <div class="item">
+                                                <a href="navbar.html">
+                                                    <div class="item-image">
+                                                        <img class="scale-effect item-img" src="./furniture/cate01.jpg"
+                                                            alt="furniture">
+                                                    </div>
+                                                    <div class="item-content-info">
+                                                        <a href="navbar.html">
+                                                            <h3>Sofa Chair</h3>
+                                                            <p>12-categories</p>
+                                                    </div>
+                                                </a>
+                                                <span class="heart-icon">♡</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="furniture-card active">
+                                            <div class="item">
+                                                <a href="navbar.html">
+                                                    <div class="item-image">
+                                                        <img class="scale-effect item-img" src="./furniture/cate02.jpg"
+                                                            alt="furniture">
+                                                    </div>
+                                                    <div class="item-content-info">
+                                                        <a href="navbar.html">
+                                                            <h3>Sofa Chair</h3>
+                                                            <p>12-categories</p>
+                                                    </div>
+                                                </a>
+                                                <span class="heart-icon">♡</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="furniture-card active">
+                                            <div class="item">
+                                                <a href="navbar.html">
+                                                    <div class="item-image">
+                                                        <img class="scale-effect item-img" src="./furniture/cate03.jpg"
+                                                            alt="furniture">
+                                                    </div>
+                                                    <div class="item-content-info">
+                                                        <a href="navbar.html">
+                                                            <h3>Sofa Chair</h3>
+                                                            <p>12-categories</p>
+                                                    </div>
+                                                </a>
+                                                <span class="heart-icon">♡</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="furniture-card active">
+                                            <div class="item">
+                                                <a href="navbar.html">
+                                                    <div class="item-image">
+                                                        <img class="scale-effect item-img" src="./furniture/cate04.jpg"
+                                                            alt="furniture">
+                                                    </div>
+                                                    <div class="item-content-info">
+                                                        <a href="navbar.html">
+                                                            <h3>Sofa Chair</h3>
+                                                            <p>12-categories</p>
+                                                    </div>
+                                                </a>
+                                                <span class="heart-icon">♡</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="furniture-card active">
+                                            <div class="item">
+                                                <a href="navbar.html">
+                                                    <div class="item-image">
+                                                        <img class="scale-effect item-img" src="./furniture/cate05.jpg"
+                                                            alt="furniture">
+                                                    </div>
+                                                    <div class="item-content-info">
+                                                        <a href="navbar.html">
+                                                            <h3>Sofa Chair</h3>
+                                                            <p>12-categories</p>
+                                                    </div>
+                                                </a>
+                                                <span class="heart-icon">♡</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="furniture-card active">
+                                            <div class="item">
+                                                <a href="navbar.html">
+                                                    <div class="item-image">
+                                                        <img class="scale-effect item-img" src="./furniture/cate06.jpg"
+                                                            alt="furniture">
+                                                    </div>
+                                                    <div class="item-content-info">
+                                                        <a href="navbar.html">
+                                                            <h3>Sofa Chair</h3>
+                                                            <p>12-categories</p>
+                                                    </div>
+                                                </a>
+                                                <span class="heart-icon">♡</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="furniture-card active">
+                                            <div class="item">
+                                                <a href="navbar.html">
+                                                    <div class="item-image">
+                                                        <img class="scale-effect item-img" src="./furniture/cate07.jpg"
+                                                            alt="furniture">
+                                                    </div>
+                                                    <div class="item-content-info">
+                                                        <a href="navbar.html">
+                                                            <h3>Sofa Chair</h3>
+                                                            <p>12-categories</p>
+                                                    </div>
+                                                </a>
+                                                <span class="heart-icon">♡</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="furniture-card active">
+                                            <div class="item">
+                                                <a href="navbar.html">
+                                                    <div class="item-image">
+                                                        <img class="scale-effect item-img" src="./furniture/cate08.jpg"
+                                                            alt="furniture">
+                                                    </div>
+                                                    <div class="item-content-info">
+                                                        <a href="navbar.html">
+                                                            <h3>Sofa Chair</h3>
+                                                            <p>12-categories</p>
+                                                    </div>
+                                                </a>
+                                                <span class="heart-icon">♡</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="furniture-card active">
+                                            <div class="item">
+                                                <a href="navbar.html">
+                                                    <div class="item-image">
+                                                        <img class="scale-effect item-img" src="./furniture/cate09.jpg"
+                                                            alt="furniture">
+                                                    </div>
+                                                    <div class="item-content-info">
+                                                        <a href="navbar.html">
+                                                            <h3>Sofa Chair</h3>
+                                                            <p>12-categories</p>
+                                                    </div>
+                                                </a>
+                                                <span class="heart-icon">♡</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide last-slide">
+                                        <div class="furniture-card active">
+                                            <div class="item">
+                                                <a href="navbar.html">
+                                                    <div class="item-image">
+                                                        <img class="scale-effect item-img" src="./furniture/cate10.jpg"
+                                                            alt="furniture">
+                                                    </div>
+                                                    <div class="item-content-info">
+                                                        <a href="navbar.html">
+                                                            <h3 class="item-title">Sofa Chair</h3>
+                                                            <p>12-categories</p>
+                                                    </div>
+                                                </a>
+                                                <span class="heart-icon">♡</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="controls">
+                                    <button class="previous"><i class="fa-solid fa-arrow-left"></i></button>
+                                    <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <script src="script.js"></script>
-        <script src="https://kit.fontawesome.com/3e27766942.js" crossorigin="anonymous"></script>
 
+    <div class="cozy-banner">
+        <div class="container">
+            <div class="row">
+                <div class="banner02">
+                    <div class="scale-effect cdz-banner banner-02-container">
+                        <div class="cdz-banner-02-background">
+                            <p class="cdz-banner-title h2 text-center">
+                                The minimalist style in apartments design is about a streamlined shape<br>
+                                and a large space while remaining cozy and attractive.
+                            </p>
+
+                        </div>
+                        <div class="banner02-img-container">
+                            <div class="banner-02-image cdz-banner scale-effect">
+                                <img class="banner-02-image-img" src="./assets/banner06.jpg" alt="Cozy Banner">
+                            </div>
+                        </div>
+
+                        <div class="banner-counter">
+                            <div class="container">
+                                <div class="banner-stat">
+                                    <div class="banner-stat-item">
+                                        <div class="banner-stat-item-number">2354+</div>
+                                        <div class="banner-stat-item-label">Project Finished</div>
+                                    </div>
+                                    <div class="banner-stat-item">
+                                        <div class="banner-stat-item-number">9800+</div>
+                                        <div class="banner-stat-item-label">Professional Designer</div>
+                                    </div>
+                                    <div class="banner-stat-item">
+                                        <div class="banner-stat-item-number">6875+</div>
+                                        <div class="banner-stat-item-label">Ongoing Project</div>
+                                    </div>
+                                    <div class="banner-stat-item">
+                                        <div class="banner-stat-item-number">6875+</div>
+                                        <div class="banner-stat-item-label">Ongoing Project</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- TRENDING -->
+
+    <div class="cdz-trending">
+        <div class="container">
+            <div class="row">
+                <div class="cdz-trending-info">
+
+                    <div class="cdz-trending-title h1 text-center">Trending <span class="text-underline">
+                            Products</span></div>
+                    <div class="cdz-trending-subtitle text-center">The main living areas, whether they are separate
+                        rooms or
+                        combined in an open-concept space,<br>
+                        set the stage for life with family and friends.
+                    </div>
+                    <div class="cdz-trending-columns">
+                        <div class="cdz-trending-right">
+                                <div class="cdz-trending-image cdz-banner scale-effect">
+                                    <a href="navbar.html">
+                                        <img src="./assets/banner05.jpg" alt="Trending Product" />
+                                    </a>
+                                </div>
+                            <div class="cdz-trending-head h2">How To Decorate Your Bedroom?</div>
+                            <div class="cdz-trending-subtitle h4">Are you tired of coming home to a nondescript bedroom? Or have you had the same style for years and want to give your room a new look? A beautiful bedroom will make a home feel more inviting.</div>
+                        </div>
+                        <div class="cdz-trending-left">
+                            <div class="cdz-trending-head  h2">How To Decorate Your Bedroom?</div>
+                            <div class="cdz-trending-subtitle h3">Are you tired of coming home to a nondescript bedroom? Or have you had the same style for years and want to give your room a new look? A beautiful bedroom will make a home feel more inviting.</div>
+                            <div class="cdz-trending-image cdz-banner scale-effect">
+                                <a href="navbar.html">
+                                    <img src="./assets/banner04.jpg" alt="Trending Product" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOP PRODUCT COLLECTIONS -->
+    <div class="top-prod">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-24"></div>
+            </div>
+            <div class="row"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/3e27766942.js" crossorigin="anonymous"></script>
 </body>
-<!--             -->
 
 </html>

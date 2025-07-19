@@ -21,7 +21,77 @@ body {
     padding-right: 10px;
 }
 
+.text-center {
+    text-align: center;
+}
 
+a {
+    color: #121212
+}
+
+a:active,
+a:focus,
+a:visited {
+    color: #121212;
+    font-weight: normal
+}
+
+a:hover {
+    text-decoration: none
+}
+
+a:active,
+a:focus,
+a:visited {
+    color: #121212
+}
+
+a:hover {
+    color: #e6d233
+}
+
+h1,
+.h1 {
+    font: 600 24px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif;
+    color: #000000;
+    margin: 0 0 10px
+}
+
+h2,
+.h2 {
+    font: 600 20px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif;
+    margin: 0 0 10px
+}
+
+h3,
+.h3 {
+    font: 600 18px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif;
+    margin: 0 0 10px
+}
+
+h4,
+.h4 {
+    font: 500 16px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif;
+    margin: 0 0 5px
+}
+
+h5,
+.h5 {
+    font: 500 14px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif;
+    margin: 0 0 5px
+}
+
+h6,
+.h6 {
+    font: 500 12px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif;
+    margin: 0 0 5px
+}
+
+.flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch
+}
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
     .inner-container {
@@ -43,7 +113,6 @@ body {
 
 .col-sm-24 {
     width: 100%;
-    float: left;
     position: relative;
     min-height: 1px;
     padding-left: 10px;
@@ -54,17 +123,11 @@ body {
     margin-bottom: 60px;
 }
 
-
-.img-responsive {
-    display: block;
-    max-width: 100%;
-    height: auto
-}
-
 .space-bottom {
     margin-bottom: 60px;
 }
 
+/* 
 .row {
     margin-left: -10px;
     margin-right: -10px
@@ -93,7 +156,7 @@ body {
 
 .row:after {
     clear: both
-}
+} */
 
 
 .flex-grid {
@@ -115,6 +178,9 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
 
 /* Back to top button styles */
 .back-to-top {
@@ -134,7 +200,7 @@ ul {
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(255, 213, 0, 0.3);
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
@@ -152,6 +218,7 @@ ul {
     visibility: visible;
     transform: translateY(0);
 }
+
 .back-to-top::before {
     content: '';
     width: 12px;
@@ -161,6 +228,7 @@ ul {
     transform: rotate(45deg);
     margin-bottom: 2px;
 }
+
 @media only screen and (max-width: 767px) {
     #backToTop {
         display: none !important
@@ -879,4 +947,424 @@ img {
     .cdz-block-title {
         margin-bottom: 20px !important
     }
+}
+
+.home-demo .item {
+    background: #ff3f4d;
+}
+
+.home-demo h2 {
+    color: #FFF;
+    text-align: center;
+    padding: 5rem 0;
+    margin: 0;
+    font-style: italic;
+    font-weight: 300;
+}
+
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto
+}
+
+
+/* furniture image */
+.slide {
+    padding: 0 5px;
+    /* This replaces margin-right: 10px */
+}
+
+.furniture-card {
+    background: white;
+    height: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    width: 100%;
+    /* Let it fill the slide container */
+}
+
+.furniture-card:hover .item-content-info {
+    background-color: rgb(0, 0, 0);
+}
+
+.item {
+    position: relative;
+    text-align: center;
+}
+
+.item-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+}
+
+.item-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.scale-effect.item-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    backface-visibility: hidden;
+}
+
+.scale-effect.item-img:hover {
+    transform: scale(1.05);
+}
+
+.item-content-info {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 2px 6px;
+    text-align: center;
+    color: #ffffff;
+    transition: all 500ms ease;
+    backface-visibility: hidden
+}
+
+.item-content-info>* {
+    position: relative
+}
+
+.item-content-info:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: .5;
+    transition: all 500ms ease;
+    backface-visibility: hidden;
+    content: ''
+}
+
+.item-content-info p {
+    font-size: 80%;
+    margin-bottom: 0;
+    font-weight: 300;
+    color: white;
+}
+
+.item-content-info .item-title {
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 32px;
+    text-decoration: none;
+    font-size: 120%
+}
+
+.item-content-info a {
+    color: #ffffff
+}
+
+.item-content-info a:hover {
+    color: #e6d233
+}
+
+/* Heart icon - clickable */
+.heart-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: #ccc;
+    z-index: 4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.heart-icon:hover {
+    transform: scale(1.1);
+    color: #999;
+}
+
+.heart-icon.active {
+    color: #FFD700;
+}
+
+.heart-icon.active:hover {
+    color: #FFC107;
+}
+
+/* Remove the old hover effect */
+.item:hover .item-content-info:before {
+    opacity: 0;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#controls button {
+    height: 30px;
+    width: 30px;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#controls button:hover {
+    background-color: gold;
+    color: #000000;
+    border: none;
+}
+
+#controls button.disabled {
+    background-color: #cccccc !important;
+    color: #666666 !important;
+    cursor: not-allowed !important;
+    opacity: 0.5;
+}
+
+#controls button.disabled:hover {
+    background-color: #cccccc !important;
+    color: #666666 !important;
+    transform: none;
+}
+
+
+/* BED BANNER */
+.cozy-banner .container {
+    position: absolute;
+}
+
+.cozy-banner .container .cdz-banner-title {
+    padding-top: 50px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.cozy-banner .container .cdz-banner-02-background {
+    background-color: #3a6051;
+    height: 500px;
+}
+
+.banner-02-image {
+    position: relative;
+    overflow: hidden;
+    margin-top: -370px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.banner-02-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.banner-02-image img.banner-02-image-img {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.banner-02-image:hover img {
+    transform: scale(1.05);
+}
+
+.banner-02-image:first-child {
+    grid-column: 1 / -1;
+}
+
+.cdz-banner-02-background,
+.banner02-img-container,
+.banner-02-counter .row,
+.stats-banner {
+    padding: 20px;
+}
+
+/* Banner Counter Styles - Add this to your style.css */
+.banner-counter {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -70px;
+}
+
+.banner-stat {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 5px 5px rgba(201, 0, 0, 0.9),
+        inset 0 -3em 3em rgb(226, 224, 218);
+}
+
+.banner-stat-item {
+    text-align: center;
+    padding: 30px;
+    min-width: 200px;
+}
+
+.banner-stat-item-number {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.banner-stat-item-label {
+    font-size: 0.7rem;
+    color: #000000;
+    font-weight: 500;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Hover effects */
+.banner-stat-item-number {
+    color: #e6d233;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .banner-counter {
+        padding: 40px 15px;
+    }
+
+    .banner-stat {
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .banner-stat-item {
+        padding: 20px;
+        min-width: auto;
+        width: 100%;
+    }
+
+    .banner-stat-item-number {
+        font-size: 0.8rem;
+    }
+
+    .banner-stat-item-label {
+        font-size: 0.8rem;
+    }
+}
+
+.cozy-banner {
+    padding-bottom: 800px;
+}
+
+
+/* TRENDING */
+
+.cdz-trending {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    padding-top: 70px;
+}
+
+.cdz-trending-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.cdz-trending-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    font-family: Poppins, Helvetica Neue, Verdana, Arial, sans-serif;
+}
+
+.cdz-trending-title .text-underline {
+    /* font-size: 2.5rem; */
+    text-decoration: underline #e6d233;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px
+}
+
+.cdz-trending-head {
+    font-size: 230%;
+    padding: 20px 0px;
+    font-weight: 600;
+    font-family: Poppins, Helvetica Neue, Verdana, Arial, sans-serif;
+}
+
+.cdz-trending-subtitle {
+    color: #000000;
+    font: 500 12px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif;
+    margin: 0 auto;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+
+.cdz-trending-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+/* TOP PRODUCT COLLECTION */
+.top-prod {
+    background-color: rgb(255, 0, 0);
+    /* background-color: #3a6051; */
+    padding: 40px 0;
+    margin-bottom: 60px;
+    font: 500 13px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif;
+}
+
+.top-prod .container {
+    width: 100%;
+    max-width: 1600px;
+    padding-inline: 30px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+
 }

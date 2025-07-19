@@ -3,152 +3,407 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Back to Top Button</title>
+    <title>Modern Statistics Banner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            box-sizing: border-box;
         }
 
-        /* Demo content to enable scrolling */
-        .content {
-            padding: 20px;
-            max-width: 800px;
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .cozy-banner {
+            position: relative;
+            width: 100%;
+        }
+
+        .cozy-banner .container {
+            position: relative;
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
         }
 
-        .section {
-            margin-bottom: 50px;
-            padding: 40px;
-            background: #f4f4f4;
-            border-radius: 8px;
+        .cdz-banner-02-background {
+            background: linear-gradient(135deg, #4a6741 0%, #3a5c32 100%);
+            height: 400px;
+            position: relative;
+            overflow: hidden;
         }
 
-        h1, h2 {
-            color: #333;
-        }
-
-        /* Back to top button styles */
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(20px);
-            transition: all 0.3s ease;
-        }
-
-        .back-to-top:hover {
-            background: #0056b3;
-            transform: translateY(0) scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
-        }
-
-        .back-to-top.show {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        /* Smooth scroll behavior */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Arrow icon using CSS */
-        .back-to-top::before {
+        .cdz-banner-02-background::before {
             content: '';
-            width: 12px;
-            height: 12px;
-            border-left: 2px solid white;
-            border-top: 2px solid white;
-            transform: rotate(45deg);
-            margin-bottom: 2px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="white" opacity="0.1"/><circle cx="80" cy="40" r="0.5" fill="white" opacity="0.05"/><circle cx="40" cy="80" r="1.5" fill="white" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+            opacity: 0.3;
+        }
+
+        .cdz-banner-title {
+            padding: 80px 40px 0;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: white;
+            text-align: center;
+            line-height: 1.4;
+            position: relative;
+            z-index: 2;
+        }
+
+        .banner02-img-container {
+            position: relative;
+            margin-top: -200px;
+            padding: 0 40px;
+            z-index: 3;
+        }
+
+        .banner-02-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+            height: 300px;
+        }
+
+        .banner-02-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .banner-02-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Modern Statistics Section */
+        .banner-counter {
+            background: white;
+            margin-top: 80px;
+            padding: 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .banner-stat {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            position: relative;
+        }
+
+        .banner-stat-item {
+            text-align: center;
+            padding: 60px 30px;
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: white;
+        }
+
+        .banner-stat-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(to bottom, transparent, #e5e7eb, transparent);
+        }
+
+        .banner-stat-item:hover {
+            background: #fafbfc;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .banner-stat-item-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f59e0b, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .banner-stat-item:hover .banner-stat-item-number {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #ea580c, #dc2626);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .banner-stat-item-label {
+            font-size: 0.95rem;
+            color: #64748b;
+            font-weight: 500;
+            line-height: 1.4;
+            text-transform: capitalize;
+            letter-spacing: 0.025em;
+            transition: color 0.3s ease;
+        }
+
+        .banner-stat-item:hover .banner-stat-item-label {
+            color: #334155;
+        }
+
+        /* Counter Animation */
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .banner-stat-item.animate {
+            animation: countUp 0.8s ease-out forwards;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .cdz-banner-title {
+                font-size: 1.8rem;
+                padding: 60px 30px 0;
+            }
+            
+            .banner02-img-container {
+                padding: 0 30px;
+            }
+
+            .banner-stat-item {
+                padding: 50px 25px;
+            }
+
+            .banner-stat-item-number {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .banner-stat {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1px;
+                background: #f1f5f9;
+            }
+
+            .banner-stat-item:nth-child(2n)::after {
+                display: none;
+            }
+
+            .banner-stat-item:nth-child(-n+2)::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60px;
+                height: 1px;
+                background: linear-gradient(to right, transparent, #e5e7eb, transparent);
+            }
+
+            .banner-stat-item {
+                padding: 40px 20px;
+            }
+
+            .banner-stat-item-number {
+                font-size: 2.5rem;
+            }
+
+            .banner-stat-item-label {
+                font-size: 0.85rem;
+            }
+
+            .cdz-banner-title {
+                font-size: 1.5rem;
+                padding: 40px 20px 0;
+            }
+
+            .banner02-img-container {
+                padding: 0 20px;
+                margin-top: -150px;
+            }
+
+            .banner-02-image {
+                height: 250px;
+                border-radius: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner-stat {
+                grid-template-columns: 1fr;
+            }
+
+            .banner-stat-item:not(:last-child)::after {
+                display: none;
+            }
+
+            .banner-stat-item:not(:last-child)::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60px;
+                height: 1px;
+                background: linear-gradient(to right, transparent, #e5e7eb, transparent);
+            }
+
+            .banner-counter {
+                margin-top: 60px;
+                border-radius: 15px;
+            }
+
+            .banner-stat-item {
+                padding: 35px 20px;
+            }
+
+            .banner-stat-item-number {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* Loading placeholder styles */
+        .banner-02-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+            z-index: 1;
+        }
+
+        .banner-02-image img {
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <h1>Scroll Down to See the Back to Top Button</h1>
-        
-        <div class="section">
-            <h2>Section 1</h2>
-            <p>This is the first section of content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-
-        <div class="section">
-            <h2>Section 2</h2>
-            <p>This is the second section of content. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-        </div>
-
-        <div class="section">
-            <h2>Section 3</h2>
-            <p>This is the third section of content. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
-        </div>
-
-        <div class="section">
-            <h2>Section 4</h2>
-            <p>This is the fourth section of content. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-            <p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-        </div>
-
-        <div class="section">
-            <h2>Section 5</h2>
-            <p>This is the fifth section of content. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
-            <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
-        </div>
-
-        <div class="section">
-            <h2>Section 6</h2>
-            <p>This is the sixth section of content. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
-            <p>Keep scrolling to see more content and test the back to top button functionality!</p>
+    <div class="cozy-banner">
+        <div class="container">
+            <div class="row" style="overflow: hidden;">
+                <div class="banner02">
+                    <div class="scale-effect cdz-banner banner-02-container">
+                        <div class="cdz-banner-02-background">
+                            <p class="cdz-banner-title">
+                                The minimalist style in apartments design is about a streamlined shape<br>
+                                and a large space while remaining cozy and attractive.
+                            </p>
+                        </div>
+                        <div class="banner02-img-container">
+                            <div class="banner-02-image">
+                                <img class="banner-02-image-img" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Modern Interior Design">
+                            </div>
+                        </div>
+                        
+                        <!-- Enhanced Banner Counter Section -->
+                        <div class="banner-counter">
+                            <div class="banner-stat">
+                                <div class="banner-stat-item">
+                                    <div class="banner-stat-item-number" data-target="2354">0</div>
+                                    <div class="banner-stat-item-label">Project Finished</div>
+                                </div>
+                                <div class="banner-stat-item">
+                                    <div class="banner-stat-item-number" data-target="9800">0</div>
+                                    <div class="banner-stat-item-label">Professional Designer</div>
+                                </div>
+                                <div class="banner-stat-item">
+                                    <div class="banner-stat-item-number" data-target="6875">0</div>
+                                    <div class="banner-stat-item-label">Ongoing Project</div>
+                                </div>
+                                <div class="banner-stat-item">
+                                    <div class="banner-stat-item-number" data-target="6875">0</div>
+                                    <div class="banner-stat-item-label">Ongoing Project</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Back to top button -->
-    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top"></a>
-
     <script>
-        // Get the back to top button
-        const backToTopButton = document.getElementById('backToTop');
+        // Counter animation function
+        function animateCounter(element, target, duration = 2000) {
+            const start = 0;
+            const increment = target / (duration / 16); // 60fps
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current) + '+';
+            }, 16);
+        }
 
-        // Show/hide button based on scroll position
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 200) {
-                document.getElementById('backToTop').classList.add('show');
-            } else {
-                document.getElementById('backToTop').classList.remove('show');
+        // Intersection Observer for counter animation
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.banner-stat-item-number');
+                    counters.forEach(counter => {
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        animateCounter(counter, target);
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Start observing when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const counterSection = document.querySelector('.banner-counter');
+            if (counterSection) {
+                observer.observe(counterSection);
             }
+
+            // Add staggered animation to stat items
+            const statItems = document.querySelectorAll('.banner-stat-item');
+            statItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('animate');
+                }, index * 150);
+            });
         });
 
-        // Smooth scroll to top when button is clicked
-        document.getElementById('backToTop').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+        // Add parallax effect to background (optional)
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const background = document.querySelector('.cdz-banner-02-background');
+            if (background) {
+                background.style.transform = `translateY(${scrolled * 0.3}px)`;
+            }
         });
     </script>
 </body>
