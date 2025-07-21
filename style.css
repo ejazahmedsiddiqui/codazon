@@ -1116,7 +1116,10 @@ img {
 }
 
 #controls,
-#controls2 {
+#controls2,
+#controls3,
+#controls4,
+#controls5 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1128,7 +1131,10 @@ img {
 }
 
 #controls button,
-#controls2 button {
+#controls2 button,
+#controls3 button,
+#controls4 button,
+#controls5 button {
     height: 30px;
     width: 30px;
     border: none;
@@ -1140,14 +1146,20 @@ img {
 }
 
 #controls button:hover,
-#controls2 button:hover {
+#controls2 button:hover,
+#controls3 button:hover,
+#controls4 button:hover,
+#controls5 button:hover {
     background-color: gold;
     color: #000000;
     border: none;
 }
 
 #controls button.disabled,
-#controls2 button.disabled {
+#controls2 button.disabled,
+#controls3 button.disabled,
+#controls4 button.disabled,
+#controls5 button.disabled {
     background-color: #cccccc !important;
     color: #666666 !important;
     cursor: not-allowed !important;
@@ -1155,7 +1167,10 @@ img {
 }
 
 #controls button.disabled:hover,
-#controls2 button.disabled:hover {
+#controls2 button.disabled:hover,
+#controls3 button.disabled:hover,
+#controls4 button.disabled:hover,
+#controls5 button.disabled:hover {
     background-color: #cccccc !important;
     color: #666666 !important;
     transform: none;
@@ -1435,11 +1450,11 @@ img {
     color: black;
 }
 
-.top-products ul.furniture-item.hidden {
+.top-products .slider-container.hidden {
     display: none;
 }
 
-.top-products ul.furniture-item.active {
+.top-products .slider-container.active {
     display: block;
 }
 
@@ -1466,15 +1481,6 @@ img {
     color: black;
     background-color: grey;
 }
-.slider3{
-    background-color: black;
-}
-.slider4{
-    background-color: red;
-}
-.slider5{
-    background-color: yellow;
-}
 
 .furniture-item-card .slide2 {
     padding: 0 5px;
@@ -1484,7 +1490,8 @@ img {
 /* Add positioning context to the furniture card */
 .furniture-item-card {
     color: black;
-    background-color: #3a6051; /* Your specified background color */
+    background-color: #3a6051;
+    /* Your specified background color */
 }
 
 .furniture-item-card .slide2 {
@@ -1524,11 +1531,12 @@ img {
 .furniture-card-rating .fa-solid.fa-star.hidden {
     display: none;
 }
+
 /* Shopping cart - appears on card hover and changes color on cart hover */
 .add-to-cart {
     position: absolute;
     bottom: -5px;
-    right:-5px;
+    right: -5px;
     background-color: #000000;
     border: 8px solid #3a6051;
     color: white;
@@ -1571,4 +1579,158 @@ img {
 
 .add-to-cart:hover i {
     color: black;
+}
+
+
+/* Completed {Projects */
+.completed-title.block-title {
+    color: black;
+    padding-bottom: 20px;
+}
+
+.completed-images-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.completed-images-top {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+    gap: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.completed-images-bottom {
+    display: flex;
+    padding: 10px 20px 0px 20px;
+    flex-direction: row;
+    gap: 10px;
+    overflow: hidden;
+}
+
+/* Image container positioning */
+.completed-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.completed-image a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+}
+
+/* Base image styles */
+.completed-image img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0.7);
+}
+
+/* Image hover effect */
+.completed-image:hover img {
+    transform: scale(1.05);
+    filter: brightness(1);
+}
+
+/* Title overlay - Base styles */
+.completed-image .item-content-project {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    background: rgba(249, 243, 195, 0.95);
+    padding: 15px 20px;
+    z-index: -1;
+    opacity: 0;
+    transition: z-index 0.3s ease, opacity 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+/* Show title on hover - default for large screens */
+.completed-image:hover .item-content-project {
+    z-index: 10;
+    opacity: 1;
+}
+
+/* Title text styling */
+.completed-image .item-content-project .bc-title {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #000000;
+    margin: 0;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 1199px) {
+    .completed-images-top,
+    .completed-images-bottom {
+        flex-direction: column;
+    }
+    
+    .completed-image img,
+    .demo-img {
+        height: 250px;
+    }
+
+    /* Disable hover effects below 1200px - show title always */
+    .completed-image .item-content-project {
+        z-index: 10;
+        opacity: 1;
+        position: static;
+        background: rgba(249, 243, 195, 1);
+        margin-top: -1px;
+        border-radius: 0 0 8px 8px;
+        backdrop-filter: none;
+    }
+
+    .completed-image:hover .item-content-project {
+        z-index: 10;
+        opacity: 1;
+    }
+
+    /* Remove image hover effects on smaller screens */
+    .completed-image:hover img,
+    .completed-image:hover .demo-img {
+        transform: none;
+        filter: brightness(1);
+    }
+
+    .completed-image img,
+    .completed-image .demo-img {
+        filter: brightness(1);
+    }
+}
+
+/* Ensure hover effects only work on large screens */
+@media (min-width: 1200px) {
+    .completed-image .item-content-project {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .completed-image:hover .item-content-project {
+        z-index: 10;
+        opacity: 1;
+    }
+
+    .completed-image:hover img,
+    .completed-image:hover .demo-img {
+        transform: scale(1.05);
+        filter: brightness(1);
+    }
 }
