@@ -3,382 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalist Apartment Design</title>
+    <title>Furniture Card with Cart Icon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            margin: 0;
         }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #4a6741, #5a7a4f);
-            color: white;
-            padding: 80px 20px 0;
-            text-align: center;
+        /* Furniture Item Card */
+        .furniture-item-card {
+            color: black;
+            background-color: #3a6051;
+        }
+
+        .furniture-item-card .slide2 {
+            padding: 0 5px;
+            border-radius: 5%;
+            list-style: none;
+        }
+
+        /* Add positioning context to the furniture card */
+        .furniture-card {
             position: relative;
-            height: 50vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 2.8rem;
-            font-weight: 300;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            font-weight: 300;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Bedroom Section */
-        .bedroom-showcase {
-            background: linear-gradient(to bottom, #4a6741 0%, #5a7a4f 40%, #f5f5f5 40%, #f5f5f5 100%);
-            padding: 0;
-            position: relative;
-            height: 80vh;
-            min-height: 600px;
-        }
-
-        .bedroom-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            height: 100%;
+            background: white;
+            border-radius: 10px;
             overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
 
-        .bedroom-image {
+        .furniture-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .furniture-card-image {
+            display: block;
+            text-decoration: none;
+        }
+
+        .item-image img {
             width: 100%;
-            height: 100%;
+            height: 200px;
             object-fit: cover;
             display: block;
         }
 
-        /* Alternative background image method */
-        .bedroom-bg {
+        .furniture-card-info {
+            background-color: white;
+            padding: 20px;
             width: 100%;
-            height: 100%;
-            background: url('your-bed-image.jpg') center center no-repeat;
-            background-size: cover;
-        }
-
-        /* Statistics Section */
-        .stats {
-            background: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .stats-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 60px;
-        }
-
-        .stat-item {
-            padding: 40px 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: black;
+            margin-top: -100px;
+            height: 180px;
             border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            position: relative;
+            z-index: 2;
         }
 
-        .stat-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        .furniture-card-title {
+            color: black;
+            padding-top: 60px;
+            font: 500 18px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif;
+            text-decoration: none;
+            transition: color 0.3s ease;
         }
 
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: bold;
-            color: #d4af37;
-            margin-bottom: 15px;
-            display: block;
+        .furniture-card-title:hover {
+            color: gold;
         }
 
-        .stat-label {
-            font-size: 1.2rem;
-            color: #333;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .furniture-card-rating .fa-solid.fa-star.hidden {
+            display: none;
         }
 
-        /* Trending Section */
-        .trending-section {
-            background: #f8f8f8;
-            padding: 80px 20px;
-            text-align: center;
+        .furniture-card-price {
+            font-weight: 600;
+            font-size: 16px;
+            color: #3a6051;
+            margin-top: 10px;
         }
 
-        .trending-title {
-            font-size: 3rem;
-            color: #333;
-            margin-bottom: 50px;
-            font-weight: bold;
-        }
-
-        /* Scroll to top button */
-        .scroll-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
+        /* Shopping cart - appears on card hover and changes color on cart hover */
+        .add-to-cart {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: #3a6051;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 50px;
             height: 50px;
-            background: #4a6741;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 18px;
-            transition: all 0.3s ease;
-            z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
-        .scroll-top:hover {
-            background: #5a7a4f;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        .add-to-cart i {
+            font-size: 16px;
+            transition: color 0.5s ease;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero {
-                height: 45vh;
-                padding: 60px 15px 0;
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .bedroom-showcase {
-                height: 70vh;
-                min-height: 500px;
-            }
-
-            .bedroom-container {
-                height: 100%;
-            }
-
-            .stats-container {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 40px;
-            }
-
-            .stat-number {
-                font-size: 2.8rem;
-            }
-
-            .trending-title {
-                font-size: 2.2rem;
-            }
-
-            .scroll-top {
-                width: 45px;
-                height: 45px;
-                font-size: 16px;
-            }
+        /* Show cart icon on card hover */
+        .furniture-card:hover .add-to-cart {
+            opacity: 1;
+            visibility: visible;
         }
 
-        @media (max-width: 480px) {
-            .hero {
-                padding: 40px 15px 0;
-                height: 40vh;
-            }
-
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .bedroom-showcase {
-                height: 60vh;
-                min-height: 400px;
-            }
-
-            .stats {
-                padding: 60px 15px;
-            }
-
-            .stats-container {
-                gap: 30px;
-            }
-
-            .stat-number {
-                font-size: 2.5rem;
-            }
-
-            .stat-label {
-                font-size: 1rem;
-            }
-
-            .trending-section {
-                padding: 60px 15px;
-            }
-
-            .trending-title {
-                font-size: 2rem;
-            }
+        /* Change cart background to gold and icon to black on cart hover */
+        .add-to-cart:hover {
+            background-color: gold;
+            transform: scale(1.05);
+            transition: background-color 0.5s ease, transform 0.3s ease;
         }
 
-        /* Loading animation */
-        .bedroom-image {
-            opacity: 0;
-            animation: fadeIn 1s ease-in-out forwards;
+        .add-to-cart:hover i {
+            color: black;
         }
 
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
+        /* Demo container styling */
+        .demo-container {
+            max-width: 300px;
+            margin: 50px auto;
         }
 
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>The minimalist style in apartments design is about a streamlined shape</h1>
-            <p>and a large space while remaining cozy and attractive.</p>
-        </div>
-    </section>
+    <h2>Furniture Card with Smooth Cart Icon Transition</h2>
+    
+    <div class="demo-container">
+        <ul style="padding: 0; margin: 0;">
+            <li class="slide2">
+                <div class="furniture-card">
+                    <div class="item">
+                        <a class="furniture-card-image" href="#" onclick="return false;">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop" alt="furniture">
+                            </div>
+                        </a>
+                        <div class="furniture-card-info">
+                            <a href="#" onclick="return false;" style="text-decoration: none;">
+                                <div class="furniture-card-title">
+                                    Diamond Halo Stud Chair
+                                </div>
+                            </a>
+                            <div class="furniture-card-rating">
+                                <i class="fa-solid fa-star hidden"></i>
+                                <i class="fa-solid fa-star hidden"></i>
+                                <i class="fa-solid fa-star hidden"></i>
+                                <i class="fa-solid fa-star hidden"></i>
+                            </div>
+                            <div class="furniture-card-price">$122</div>
+                            <div class="add-to-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 
-    <!-- Bedroom Showcase -->
-    <section class="bedroom-showcase">
-        <div class="bedroom-container">
-            <!-- Replace 'your-bed-image.jpg' with your actual image path -->
-            <img class="scale-effect cdz-banner image-container" src="./assets/banner06.jpg" alt="Minimalist Bedroom Design" class="bedroom-image">
-            
-            <!-- Alternative: Uncomment below and comment above img tag to use background image -->
-            <!-- <div class="bedroom-bg"></div> -->
-        </div>
-    </section>
-
-    <!-- Statistics Section -->
-    <section class="stats">
-        <div class="stats-container" style="margin-top: -70px;">
-            <div class="stat-item">
-                <span class="stat-number">2354+</span>
-                <span class="stat-label">Project Finished</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">9800+</span>
-                <span class="stat-label">Professional Designer</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">6875+</span>
-                <span class="stat-label">Ongoing Project</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">6875+</span>
-                <span class="stat-label">Ongoing Project</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trending Section -->
-    <section class="trending-section">
-        <h2 class="trending-title">Trending Products</h2>
-        <!-- You can add trending products content here -->
-    </section>
-
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top" onclick="scrollToTop()">↑</button>
-
-    <script>
-        // Scroll to top functionality
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-
-        // Show/hide scroll to top button
-        window.addEventListener('scroll', function() {
-            const scrollTop = document.querySelector('.scroll-top');
-            if (window.pageYOffset > 300) {
-                scrollTop.style.display = 'block';
-            } else {
-                scrollTop.style.display = 'none';
-            }
-        });
-
-        // Initially hide the scroll to top button
-        document.querySelector('.scroll-top').style.display = 'none';
-
-        // Add loading effect to stats
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Apply observer to stat items
-        document.addEventListener('DOMContentLoaded', function() {
-            const statItems = document.querySelectorAll('.stat-item');
-            statItems.forEach(item => {
-                item.style.opacity = '0';
-                item.style.transform = 'translateY(30px)';
-                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(item);
-            });
-        });
-    </script>
+    <div style="text-align: center; margin-top: 40px; color: #666;">
+        <p>Hover over the card to see the cart icon appear</p>
+        <p>Hover over the cart icon to see it change to gold</p>
+    </div>
 </body>
 </html>
