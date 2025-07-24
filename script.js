@@ -157,34 +157,92 @@ const tnslider5 = tns({
     1600: { items: 6 }
   }
 });
-
 document.addEventListener('DOMContentLoaded', function () {
-  // Get all tab items and furniture lists
+  // Get all elements
   const tabItems = document.querySelectorAll('.top-prod-list-item');
-  const sliderContainer = document.querySelectorAll('.slider-container');
+  const sliderContainers = document.querySelectorAll('.slider-container');
+  const dropdownButton = document.getElementById('dropdownButton');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+  const dropdownItems = document.querySelectorAll('.dropdown-item');
+  const selectedOption = document.getElementById('selectedOption');
 
-  // Add click event listener to each tab
-  tabItems.forEach((tab, index) => {
-    tab.addEventListener('click', function () {
-      // Remove active class from all tabs
-      tabItems.forEach(item => {
-        item.classList.remove('list-active');
+  // Function to show content based on index
+  function showContent(index) {
+      // Hide all containers
+      sliderContainers.forEach(container => {
+          container.classList.remove('active');
+          container.classList.add('hidden');
       });
 
-      // Add active class to clicked tab
-      this.classList.add('list-active');
-
-      // Hide all furniture lists
-      sliderContainer.forEach(item => {
-        item.classList.remove('active');
-        item.classList.add('hidden');
-      });
-
-      // Show the corresponding furniture list
-      if (sliderContainer[index]) {
-        sliderContainer[index].classList.remove('hidden');
-        sliderContainer[index].classList.add('active');
+      // Show selected container
+      if (sliderContainers[index]) {
+          sliderContainers[index].classList.remove('hidden');
+          sliderContainers[index].classList.add('active');
       }
-    });
+  }
+
+  // Desktop tab functionality
+  tabItems.forEach((tab, index) => {
+      tab.addEventListener('click', function () {
+          // Remove active class from all tabs
+          tabItems.forEach(item => item.classList.remove('list-active'));
+          
+          // Add active class to clicked tab
+          this.classList.add('list-active');
+          
+          // Show corresponding content
+          showContent(index);
+
+          // Update dropdown selection (for consistency)
+          dropdownItems.forEach(item => item.classList.remove('active'));
+          dropdownItems[index].classList.add('active');
+          selectedOption.textContent = this.textContent;
+      });
+  });
+
+  // Dropdown button click
+  dropdownButton.addEventListener('click', function (e) {
+      e.stopPropagation();
+      dropdownMenu.classList.toggle('show');
+      dropdownButton.classList.toggle('active');
+  });
+
+  // Dropdown item selection
+  dropdownItems.forEach((item, index) => {
+      item.addEventListener('click', function () {
+          // Update selected option
+          selectedOption.textContent = this.textContent;
+          
+          // Update active states
+          dropdownItems.forEach(dropItem => dropItem.classList.remove('active'));
+          this.classList.add('active');
+
+          // Update desktop tabs (for consistency)
+          tabItems.forEach(tab => tab.classList.remove('list-active'));
+          tabItems[index].classList.add('list-active');
+          
+          // Show corresponding content
+          showContent(index);
+          
+          // Close dropdown
+          dropdownMenu.classList.remove('show');
+          dropdownButton.classList.remove('active');
+      });
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function (e) {
+      if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+          dropdownMenu.classList.remove('show');
+          dropdownButton.classList.remove('active');
+      }
+  });
+
+  // Handle window resize to ensure proper state
+  window.addEventListener('resize', function () {
+      if (window.innerWidth > 768) {
+          dropdownMenu.classList.remove('show');
+          dropdownButton.classList.remove('active');
+      }
   });
 });

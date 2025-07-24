@@ -1450,6 +1450,102 @@ img {
     color: black;
 }
 
+/* Dropdown styles (hidden by default) */
+.dropdown-container {
+    display: none;
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.dropdown-button {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: white;
+    color: black;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.dropdown-button:hover {
+    border-color: #999;
+}
+
+.dropdown-arrow {
+    transition: transform 0.3s ease;
+}
+
+.dropdown-button.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: gold;
+    z-index: 1000;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.dropdown-menu.show {
+    max-height: 200px;
+}
+
+.dropdown-item {
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f8f8;
+}
+
+.dropdown-item.active {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .top-prod-options-list {
+        display: none;
+    }
+
+    .dropdown-container {
+        display: block;
+    }
+
+    .top-prod-options {
+        padding: 20px;
+    }
+
+    .slider-container {
+        margin: 10px;
+        padding: 30px 15px;
+    }
+
+    .category-title {
+        font-size: 20px;
+    }
+}
+
 .top-products .slider-container.hidden {
     display: none;
 }
@@ -1676,11 +1772,12 @@ img {
 
 /* Responsive design */
 @media (max-width: 1199px) {
+
     .completed-images-top,
     .completed-images-bottom {
         flex-direction: column;
     }
-    
+
     .completed-image img,
     .demo-img {
         height: 250px;

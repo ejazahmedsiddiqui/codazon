@@ -498,24 +498,68 @@
             <div class="row">
                 <div class="col-sm-24">
                     <div class="top-prod-options">
+                        <!-- Desktop horizontal list -->
                         <ul class="top-prod-options-list">
-                            <li class="top-prod-list-item list-active">Chairs & Armchairs</li>
-                            <li class="top-prod-list-item">Beds & Sofa</li>
-                            <li class="top-prod-list-item">Lamps</li>
-                            <li class="top-prod-list-item">Tables</li>
+                            <li class="top-prod-list-item list-active" data-index="0">Chairs & Armchairs</li>
+                            <li class="top-prod-list-item" data-index="1">Beds & Sofa</li>
+                            <li class="top-prod-list-item" data-index="2">Lamps</li>
+                            <li class="top-prod-list-item" data-index="3">Tables</li>
                         </ul>
+                
+                        <!-- Mobile dropdown -->
+                        <div class="dropdown-container">
+                            <button class="dropdown-button" id="dropdownButton">
+                                <span id="selectedOption">Chairs & Armchairs</span>
+                                <span class="dropdown-arrow">▼</span>
+                            </button>
+                            <div class="dropdown-menu" id="dropdownMenu">
+                                <div class="dropdown-item active" data-index="0">Chairs & Armchairs</div>
+                                <div class="dropdown-item" data-index="1">Beds & Sofa</div>
+                                <div class="dropdown-item" data-index="2">Lamps</div>
+                                <div class="dropdown-item" data-index="3">Tables</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="top-products">
-                        <div class="slider-container active">
-                            <ul class="slider2 furniture-item">
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a class="furniture-card-image" href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_2_2.png" alt="furniture">
+                </div>
+                <div class="top-products">
+                    <div class="slider-container active">
+                        <ul class="slider2 furniture-item">
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a class="furniture-card-image" href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_2_2.png" alt="furniture">
+                                            </div>
+                                        </a>
+                                        <div class="furniture-card-info">
+                                            <a href="navbar.html">
+                                                <div class="furniture-card-title">
+                                                    Diamond Halo Stud Chair
                                                 </div>
                                             </a>
+                                            <div class="furniture-card-rating">
+                                                <i class="fa-solid fa-star hidden"></i>
+                                                <i class="fa-solid fa-star hidden"></i>
+                                                <i class="fa-solid fa-star hidden"></i>
+                                                <i class="fa-solid fa-star hidden"></i>
+                                            </div>
+                                            <div class="furniture-card-price">$122</div>
+                                            <div class="add-to-cart">
+                                                <div class="blackbox-cart">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_3_2.png" alt="furniture">
+                                            </div>
                                             <div class="furniture-card-info">
                                                 <a href="navbar.html">
                                                     <div class="furniture-card-title">
@@ -535,827 +579,799 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_3_2.png" alt="furniture">
-                                                </div>
-                                                <div class="furniture-card-info">
-                                                    <a href="navbar.html">
-                                                        <div class="furniture-card-title">
-                                                            Diamond Halo Stud Chair
-                                                        </div>
-                                                    </a>
-                                                    <div class="furniture-card-rating">
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                    </div>
-                                                    <div class="furniture-card-price">$122</div>
-                                                    <div class="add-to-cart">
-                                                        <div class="blackbox-cart">
-                                                            <i class="fa-solid fa-cart-shopping"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
+                                        </a>
                                     </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_4_2.png" alt="furniture">
-                                                </div>
-                                                <div class="furniture-card-info">
-                                                    <a href="navbar.html">
-                                                        <div class="furniture-card-title">
-                                                            Diamond Halo Stud Chair
-                                                        </div>
-                                                    </a>
-                                                    <div class="furniture-card-rating">
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_4_2.png" alt="furniture">
+                                            </div>
+                                            <div class="furniture-card-info">
+                                                <a href="navbar.html">
+                                                    <div class="furniture-card-title">
+                                                        Diamond Halo Stud Chair
                                                     </div>
-                                                    <div class="furniture-card-price">$122</div>
-                                                    <div class="add-to-cart">
-                                                        <div class="blackbox-cart">
-                                                            <i class="fa-solid fa-cart-shopping"></i>
-                                                        </div>
+                                                </a>
+                                                <div class="furniture-card-rating">
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                </div>
+                                                <div class="furniture-card-price">$122</div>
+                                                <div class="add-to-cart">
+                                                    <div class="blackbox-cart">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
                                                     </div>
                                                 </div>
-                                            </a>
-                                        </div>
+                                            </div>
+                                        </a>
                                     </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_5_2.png" alt="furniture">
-                                                </div>
-                                                <div class="furniture-card-info">
-                                                    <a href="navbar.html">
-                                                        <div class="furniture-card-title">
-                                                            Diamond Halo Stud Chair
-                                                        </div>
-                                                    </a>
-                                                    <div class="furniture-card-rating">
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_5_2.png" alt="furniture">
+                                            </div>
+                                            <div class="furniture-card-info">
+                                                <a href="navbar.html">
+                                                    <div class="furniture-card-title">
+                                                        Diamond Halo Stud Chair
                                                     </div>
-                                                    <div class="furniture-card-price">$122</div>
-                                                    <div class="add-to-cart">
-                                                        <div class="blackbox-cart">
-                                                            <i class="fa-solid fa-cart-shopping"></i>
-                                                        </div>
+                                                </a>
+                                                <div class="furniture-card-rating">
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                </div>
+                                                <div class="furniture-card-price">$122</div>
+                                                <div class="add-to-cart">
+                                                    <div class="blackbox-cart">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
                                                     </div>
                                                 </div>
-                                            </a>
-                                        </div>
+                                            </div>
+                                        </a>
                                     </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_6_2.png" alt="furniture">
-                                                </div>
-                                                <div class="furniture-card-info">
-                                                    <a href="navbar.html">
-                                                        <div class="furniture-card-title">
-                                                            Diamond Halo Stud Chair
-                                                        </div>
-                                                    </a>
-                                                    <div class="furniture-card-rating">
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_6_2.png" alt="furniture">
+                                            </div>
+                                            <div class="furniture-card-info">
+                                                <a href="navbar.html">
+                                                    <div class="furniture-card-title">
+                                                        Diamond Halo Stud Chair
                                                     </div>
-                                                    <div class="furniture-card-price">$122</div>
-                                                    <div class="add-to-cart">
-                                                        <div class="blackbox-cart">
-                                                            <i class="fa-solid fa-cart-shopping"></i>
-                                                        </div>
+                                                </a>
+                                                <div class="furniture-card-rating">
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                </div>
+                                                <div class="furniture-card-price">$122</div>
+                                                <div class="add-to-cart">
+                                                    <div class="blackbox-cart">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
                                                     </div>
                                                 </div>
-                                            </a>
-                                        </div>
+                                            </div>
+                                        </a>
                                     </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_7_2.png" alt="furniture">
-                                                </div>
-                                                <div class="furniture-card-info">
-                                                    <a href="navbar.html">
-                                                        <div class="furniture-card-title">
-                                                            Diamond Halo Stud Chair
-                                                        </div>
-                                                    </a>
-                                                    <div class="furniture-card-rating">
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_7_2.png" alt="furniture">
+                                            </div>
+                                            <div class="furniture-card-info">
+                                                <a href="navbar.html">
+                                                    <div class="furniture-card-title">
+                                                        Diamond Halo Stud Chair
                                                     </div>
-                                                    <div class="furniture-card-price">$122</div>
-                                                    <div class="add-to-cart">
-                                                        <div class="blackbox-cart">
-                                                            <i class="fa-solid fa-cart-shopping"></i>
-                                                        </div>
+                                                </a>
+                                                <div class="furniture-card-rating">
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                </div>
+                                                <div class="furniture-card-price">$122</div>
+                                                <div class="add-to-cart">
+                                                    <div class="blackbox-cart">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
                                                     </div>
                                                 </div>
-                                            </a>
-                                        </div>
+                                            </div>
+                                        </a>
                                     </div>
-                                </li>
+                                </div>
+                            </li>
 
-                            </ul>
-                            <div id="controls2">
-                                <button class="previous2"><i class="fa-solid fa-arrow-left"></i></button>
-                                <button class="next2"><i class="fa-solid fa-arrow-right"></i></button>
-                            </div>
+                        </ul>
+                        <div id="controls2">
+                            <button class="previous2"><i class="fa-solid fa-arrow-left"></i></button>
+                            <button class="next2"><i class="fa-solid fa-arrow-right"></i></button>
                         </div>
-                        <div class="slider-container hidden">
-                            <ul class="slider3 furniture-item">
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a class="furniture-card-image" href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_2_2.png" alt="furniture">
-                                                </div>
-                                            </a>
-                                            <div class="furniture-card-info">
-                                                <a href="navbar.html">
-                                                    <div class="furniture-card-title">
-                                                        Diamond Halo Stud Chair
-                                                    </div>
-                                                </a>
-                                                <div class="furniture-card-rating">
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                </div>
-                                                <div class="furniture-card-price">$122</div>
-                                                <div class="add-to-cart">
-                                                    <div class="blackbox-cart">
-                                                        <i class="fa-solid fa-cart-shopping"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a class="furniture-card-image" href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_2_2.png" alt="furniture">
-                                                </div>
-                                            </a>
-                                            <div class="furniture-card-info">
-                                                <a href="navbar.html">
-                                                    <div class="furniture-card-title">
-                                                        Diamond Halo Stud Chair
-                                                    </div>
-                                                </a>
-                                                <div class="furniture-card-rating">
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                </div>
-                                                <div class="furniture-card-price">$122</div>
-                                                <div class="add-to-cart">
-                                                    <div class="blackbox-cart">
-                                                        <i class="fa-solid fa-cart-shopping"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a class="furniture-card-image" href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_2_2.png" alt="furniture">
-                                                </div>
-                                            </a>
-                                            <div class="furniture-card-info">
-                                                <a href="navbar.html">
-                                                    <div class="furniture-card-title">
-                                                        Diamond Halo Stud Chair
-                                                    </div>
-                                                </a>
-                                                <div class="furniture-card-rating">
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                </div>
-                                                <div class="furniture-card-price">$122</div>
-                                                <div class="add-to-cart">
-                                                    <div class="blackbox-cart">
-                                                        <i class="fa-solid fa-cart-shopping"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a class="furniture-card-image" href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_2_2.png" alt="furniture">
-                                                </div>
-                                            </a>
-                                            <div class="furniture-card-info">
-                                                <a href="navbar.html">
-                                                    <div class="furniture-card-title">
-                                                        Diamond Halo Stud Chair
-                                                    </div>
-                                                </a>
-                                                <div class="furniture-card-rating">
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                </div>
-                                                <div class="furniture-card-price">$122</div>
-                                                <div class="add-to-cart">
-                                                    <div class="blackbox-cart">
-                                                        <i class="fa-solid fa-cart-shopping"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_3_2.png" alt="furniture">
-                                                </div>
-                                                <div class="furniture-card-info">
-                                                    <a href="navbar.html">
-                                                        <div class="furniture-card-title">
-                                                            Diamond Halo Stud Chair
-                                                        </div>
-                                                    </a>
-                                                    <div class="furniture-card-rating">
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                    </div>
-                                                    <div class="furniture-card-price">$122</div>
-                                                    <div class="add-to-cart">
-                                                        <div class="blackbox-cart">
-                                                            <i class="fa-solid fa-cart-shopping"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_4_2.png" alt="furniture">
-                                                </div>
-                                                <div class="furniture-card-info">
-                                                    <a href="navbar.html">
-                                                        <div class="furniture-card-title">
-                                                            Diamond Halo Stud Chair
-                                                        </div>
-                                                    </a>
-                                                    <div class="furniture-card-rating">
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                    </div>
-                                                    <div class="furniture-card-price">$122</div>
-                                                    <div class="add-to-cart">
-                                                        <div class="blackbox-cart">
-                                                            <i class="fa-solid fa-cart-shopping"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_5_2.png" alt="furniture">
-                                                </div>
-                                                <div class="furniture-card-info">
-                                                    <a href="navbar.html">
-                                                        <div class="furniture-card-title">
-                                                            Diamond Halo Stud Chair
-                                                        </div>
-                                                    </a>
-                                                    <div class="furniture-card-rating">
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                    </div>
-                                                    <div class="furniture-card-price">$122</div>
-                                                    <div class="add-to-cart">
-                                                        <div class="blackbox-cart">
-                                                            <i class="fa-solid fa-cart-shopping"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_6_2.png" alt="furniture">
-                                                </div>
-                                                <div class="furniture-card-info">
-                                                    <a href="navbar.html">
-                                                        <div class="furniture-card-title">
-                                                            Diamond Halo Stud Chair
-                                                        </div>
-                                                    </a>
-                                                    <div class="furniture-card-rating">
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                    </div>
-                                                    <div class="furniture-card-price">$122</div>
-                                                    <div class="add-to-cart">
-                                                        <div class="blackbox-cart">
-                                                            <i class="fa-solid fa-cart-shopping"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_7_2.png" alt="furniture">
-                                                </div>
-                                                <div class="furniture-card-info">
-                                                    <a href="navbar.html">
-                                                        <div class="furniture-card-title">
-                                                            Diamond Halo Stud Chair
-                                                        </div>
-                                                    </a>
-                                                    <div class="furniture-card-rating">
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                    </div>
-                                                    <div class="furniture-card-price">$122</div>
-                                                    <div class="add-to-cart">
-                                                        <div class="blackbox-cart">
-                                                            <i class="fa-solid fa-cart-shopping"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div id="controls3">
-                                <button class="previous3"><i class="fa-solid fa-arrow-left"></i></button>
-                                <button class="next3"><i class="fa-solid fa-arrow-right"></i></button>
-                            </div>
-                        </div>
-                        <div class="slider-container hidden">
-                            <ul class="slider4 furniture-item">
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a class="furniture-card-image" href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_2_2.png" alt="furniture">
-                                                </div>
-                                            </a>
-                                            <div class="furniture-card-info">
-                                                <a href="navbar.html">
-                                                    <div class="furniture-card-title">
-                                                        Diamond Halo Stud Chair
-                                                    </div>
-                                                </a>
-                                                <div class="furniture-card-rating">
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                </div>
-                                                <div class="furniture-card-price">$122</div>
-                                                <div class="add-to-cart">
-                                                    <div class="blackbox-cart">
-                                                        <i class="fa-solid fa-cart-shopping"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_3_2.png" alt="furniture">
-                                                </div>
-                                                <div class="furniture-card-info">
-                                                    <a href="navbar.html">
-                                                        <div class="furniture-card-title">
-                                                            Diamond Halo Stud Chair
-                                                        </div>
-                                                    </a>
-                                                    <div class="furniture-card-rating">
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                    </div>
-                                                    <div class="furniture-card-price">$122</div>
-                                                    <div class="add-to-cart">
-                                                        <div class="blackbox-cart">
-                                                            <i class="fa-solid fa-cart-shopping"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_4_2.png" alt="furniture">
-                                                </div>
-                                                <div class="furniture-card-info">
-                                                    <a href="navbar.html">
-                                                        <div class="furniture-card-title">
-                                                            Diamond Halo Stud Chair
-                                                        </div>
-                                                    </a>
-                                                    <div class="furniture-card-rating">
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                    </div>
-                                                    <div class="furniture-card-price">$122</div>
-                                                    <div class="add-to-cart">
-                                                        <div class="blackbox-cart">
-                                                            <i class="fa-solid fa-cart-shopping"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_5_2.png" alt="furniture">
-                                                </div>
-                                                <div class="furniture-card-info">
-                                                    <a href="navbar.html">
-                                                        <div class="furniture-card-title">
-                                                            Diamond Halo Stud Chair
-                                                        </div>
-                                                    </a>
-                                                    <div class="furniture-card-rating">
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                    </div>
-                                                    <div class="furniture-card-price">$122</div>
-                                                    <div class="add-to-cart">
-                                                        <div class="blackbox-cart">
-                                                            <i class="fa-solid fa-cart-shopping"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_6_2.png" alt="furniture">
-                                                </div>
-                                                <div class="furniture-card-info">
-                                                    <a href="navbar.html">
-                                                        <div class="furniture-card-title">
-                                                            Diamond Halo Stud Chair
-                                                        </div>
-                                                    </a>
-                                                    <div class="furniture-card-rating">
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                    </div>
-                                                    <div class="furniture-card-price">$122</div>
-                                                    <div class="add-to-cart">
-                                                        <div class="blackbox-cart">
-                                                            <i class="fa-solid fa-cart-shopping"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_7_2.png" alt="furniture">
-                                                </div>
-                                                <div class="furniture-card-info">
-                                                    <a href="navbar.html">
-                                                        <div class="furniture-card-title">
-                                                            Diamond Halo Stud Chair
-                                                        </div>
-                                                    </a>
-                                                    <div class="furniture-card-rating">
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                    </div>
-                                                    <div class="furniture-card-price">$122</div>
-                                                    <div class="add-to-cart">
-                                                        <div class="blackbox-cart">
-                                                            <i class="fa-solid fa-cart-shopping"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-
-                            </ul>
-                            <div id="controls4">
-                                <button class="previous4"><i class="fa-solid fa-arrow-left"></i></button>
-                                <button class="next4"><i class="fa-solid fa-arrow-right"></i></button>
-                            </div>
-                        </div>
-                        <div class="slider-container hidden">
-                            <ul class="slider5 furniture-item">
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a class="furniture-card-image" href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_2_2.png" alt="furniture">
-                                                </div>
-                                            </a>
-                                            <div class="furniture-card-info">
-                                                <a href="navbar.html">
-                                                    <div class="furniture-card-title">
-                                                        Diamond Halo Stud Chair
-                                                    </div>
-                                                </a>
-                                                <div class="furniture-card-rating">
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                    <i class="fa-solid fa-star hidden"></i>
-                                                </div>
-                                                <div class="furniture-card-price">$122</div>
-                                                <div class="add-to-cart">
-                                                    <div class="blackbox-cart">
-                                                        <i class="fa-solid fa-cart-shopping"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_3_2.png" alt="furniture">
-                                                </div>
-                                                <div class="furniture-card-info">
-                                                    <a href="navbar.html">
-                                                        <div class="furniture-card-title">
-                                                            Diamond Halo Stud Chair
-                                                        </div>
-                                                    </a>
-                                                    <div class="furniture-card-rating">
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                    </div>
-                                                    <div class="furniture-card-price">$122</div>
-                                                    <div class="add-to-cart">
-                                                        <div class="blackbox-cart">
-                                                            <i class="fa-solid fa-cart-shopping"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_4_2.png" alt="furniture">
-                                                </div>
-                                                <div class="furniture-card-info">
-                                                    <a href="navbar.html">
-                                                        <div class="furniture-card-title">
-                                                            Diamond Halo Stud Chair
-                                                        </div>
-                                                    </a>
-                                                    <div class="furniture-card-rating">
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                    </div>
-                                                    <div class="furniture-card-price">$122</div>
-                                                    <div class="add-to-cart">
-                                                        <div class="blackbox-cart">
-                                                            <i class="fa-solid fa-cart-shopping"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_5_2.png" alt="furniture">
-                                                </div>
-                                                <div class="furniture-card-info">
-                                                    <a href="navbar.html">
-                                                        <div class="furniture-card-title">
-                                                            Diamond Halo Stud Chair
-                                                        </div>
-                                                    </a>
-                                                    <div class="furniture-card-rating">
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                    </div>
-                                                    <div class="furniture-card-price">$122</div>
-                                                    <div class="add-to-cart">
-                                                        <div class="blackbox-cart">
-                                                            <i class="fa-solid fa-cart-shopping"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_6_2.png" alt="furniture">
-                                                </div>
-                                                <div class="furniture-card-info">
-                                                    <a href="navbar.html">
-                                                        <div class="furniture-card-title">
-                                                            Diamond Halo Stud Chair
-                                                        </div>
-                                                    </a>
-                                                    <div class="furniture-card-rating">
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                    </div>
-                                                    <div class="furniture-card-price">$122</div>
-                                                    <div class="add-to-cart">
-                                                        <div class="blackbox-cart">
-                                                            <i class="fa-solid fa-cart-shopping"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="slide2">
-                                    <div class="furniture-card">
-                                        <div class="item">
-                                            <a href="navbar.html">
-                                                <div class="item-image">
-                                                    <img class="" src="./furniture2/insidehome_7_2.png" alt="furniture">
-                                                </div>
-                                                <div class="furniture-card-info">
-                                                    <a href="navbar.html">
-                                                        <div class="furniture-card-title">
-                                                            Diamond Halo Stud Chair
-                                                        </div>
-                                                    </a>
-                                                    <div class="furniture-card-rating">
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                        <i class="fa-solid fa-star hidden"></i>
-                                                    </div>
-                                                    <div class="furniture-card-price">$122</div>
-                                                    <div class="add-to-cart">
-                                                        <div class="blackbox-cart">
-                                                            <i class="fa-solid fa-cart-shopping"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div id="controls5">
-                                <button class="previous5"><i class="fa-solid fa-arrow-left"></i></button>
-                                <button class="next5"><i class="fa-solid fa-arrow-right"></i></button>
-                            </div>
-                        </div>
-
-
-
                     </div>
+                    <div class="slider-container hidden">
+                        <ul class="slider3 furniture-item">
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a class="furniture-card-image" href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_2_2.png" alt="furniture">
+                                            </div>
+                                        </a>
+                                        <div class="furniture-card-info">
+                                            <a href="navbar.html">
+                                                <div class="furniture-card-title">
+                                                    Diamond Halo Stud Chair
+                                                </div>
+                                            </a>
+                                            <div class="furniture-card-rating">
+                                                <i class="fa-solid fa-star hidden"></i>
+                                                <i class="fa-solid fa-star hidden"></i>
+                                                <i class="fa-solid fa-star hidden"></i>
+                                                <i class="fa-solid fa-star hidden"></i>
+                                            </div>
+                                            <div class="furniture-card-price">$122</div>
+                                            <div class="add-to-cart">
+                                                <div class="blackbox-cart">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a class="furniture-card-image" href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_2_2.png" alt="furniture">
+                                            </div>
+                                        </a>
+                                        <div class="furniture-card-info">
+                                            <a href="navbar.html">
+                                                <div class="furniture-card-title">
+                                                    Diamond Halo Stud Chair
+                                                </div>
+                                            </a>
+                                            <div class="furniture-card-rating">
+                                                <i class="fa-solid fa-star hidden"></i>
+                                                <i class="fa-solid fa-star hidden"></i>
+                                                <i class="fa-solid fa-star hidden"></i>
+                                                <i class="fa-solid fa-star hidden"></i>
+                                            </div>
+                                            <div class="furniture-card-price">$122</div>
+                                            <div class="add-to-cart">
+                                                <div class="blackbox-cart">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a class="furniture-card-image" href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_2_2.png" alt="furniture">
+                                            </div>
+                                        </a>
+                                        <div class="furniture-card-info">
+                                            <a href="navbar.html">
+                                                <div class="furniture-card-title">
+                                                    Diamond Halo Stud Chair
+                                                </div>
+                                            </a>
+                                            <div class="furniture-card-rating">
+                                                <i class="fa-solid fa-star hidden"></i>
+                                                <i class="fa-solid fa-star hidden"></i>
+                                                <i class="fa-solid fa-star hidden"></i>
+                                                <i class="fa-solid fa-star hidden"></i>
+                                            </div>
+                                            <div class="furniture-card-price">$122</div>
+                                            <div class="add-to-cart">
+                                                <div class="blackbox-cart">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a class="furniture-card-image" href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_2_2.png" alt="furniture">
+                                            </div>
+                                        </a>
+                                        <div class="furniture-card-info">
+                                            <a href="navbar.html">
+                                                <div class="furniture-card-title">
+                                                    Diamond Halo Stud Chair
+                                                </div>
+                                            </a>
+                                            <div class="furniture-card-rating">
+                                                <i class="fa-solid fa-star hidden"></i>
+                                                <i class="fa-solid fa-star hidden"></i>
+                                                <i class="fa-solid fa-star hidden"></i>
+                                                <i class="fa-solid fa-star hidden"></i>
+                                            </div>
+                                            <div class="furniture-card-price">$122</div>
+                                            <div class="add-to-cart">
+                                                <div class="blackbox-cart">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_3_2.png" alt="furniture">
+                                            </div>
+                                            <div class="furniture-card-info">
+                                                <a href="navbar.html">
+                                                    <div class="furniture-card-title">
+                                                        Diamond Halo Stud Chair
+                                                    </div>
+                                                </a>
+                                                <div class="furniture-card-rating">
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                </div>
+                                                <div class="furniture-card-price">$122</div>
+                                                <div class="add-to-cart">
+                                                    <div class="blackbox-cart">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_4_2.png" alt="furniture">
+                                            </div>
+                                            <div class="furniture-card-info">
+                                                <a href="navbar.html">
+                                                    <div class="furniture-card-title">
+                                                        Diamond Halo Stud Chair
+                                                    </div>
+                                                </a>
+                                                <div class="furniture-card-rating">
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                </div>
+                                                <div class="furniture-card-price">$122</div>
+                                                <div class="add-to-cart">
+                                                    <div class="blackbox-cart">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_5_2.png" alt="furniture">
+                                            </div>
+                                            <div class="furniture-card-info">
+                                                <a href="navbar.html">
+                                                    <div class="furniture-card-title">
+                                                        Diamond Halo Stud Chair
+                                                    </div>
+                                                </a>
+                                                <div class="furniture-card-rating">
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                </div>
+                                                <div class="furniture-card-price">$122</div>
+                                                <div class="add-to-cart">
+                                                    <div class="blackbox-cart">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_6_2.png" alt="furniture">
+                                            </div>
+                                            <div class="furniture-card-info">
+                                                <a href="navbar.html">
+                                                    <div class="furniture-card-title">
+                                                        Diamond Halo Stud Chair
+                                                    </div>
+                                                </a>
+                                                <div class="furniture-card-rating">
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                </div>
+                                                <div class="furniture-card-price">$122</div>
+                                                <div class="add-to-cart">
+                                                    <div class="blackbox-cart">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_7_2.png" alt="furniture">
+                                            </div>
+                                            <div class="furniture-card-info">
+                                                <a href="navbar.html">
+                                                    <div class="furniture-card-title">
+                                                        Diamond Halo Stud Chair
+                                                    </div>
+                                                </a>
+                                                <div class="furniture-card-rating">
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                </div>
+                                                <div class="furniture-card-price">$122</div>
+                                                <div class="add-to-cart">
+                                                    <div class="blackbox-cart">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div id="controls3">
+                            <button class="previous3"><i class="fa-solid fa-arrow-left"></i></button>
+                            <button class="next3"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="slider-container hidden">
+                        <ul class="slider4 furniture-item">
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a class="furniture-card-image" href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_2_2.png" alt="furniture">
+                                            </div>
+                                        </a>
+                                        <div class="furniture-card-info">
+                                            <a href="navbar.html">
+                                                <div class="furniture-card-title">
+                                                    Diamond Halo Stud Chair
+                                                </div>
+                                            </a>
+                                            <div class="furniture-card-rating">
+                                                <i class="fa-solid fa-star hidden"></i>
+                                                <i class="fa-solid fa-star hidden"></i>
+                                                <i class="fa-solid fa-star hidden"></i>
+                                                <i class="fa-solid fa-star hidden"></i>
+                                            </div>
+                                            <div class="furniture-card-price">$122</div>
+                                            <div class="add-to-cart">
+                                                <div class="blackbox-cart">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_3_2.png" alt="furniture">
+                                            </div>
+                                            <div class="furniture-card-info">
+                                                <a href="navbar.html">
+                                                    <div class="furniture-card-title">
+                                                        Diamond Halo Stud Chair
+                                                    </div>
+                                                </a>
+                                                <div class="furniture-card-rating">
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                </div>
+                                                <div class="furniture-card-price">$122</div>
+                                                <div class="add-to-cart">
+                                                    <div class="blackbox-cart">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_4_2.png" alt="furniture">
+                                            </div>
+                                            <div class="furniture-card-info">
+                                                <a href="navbar.html">
+                                                    <div class="furniture-card-title">
+                                                        Diamond Halo Stud Chair
+                                                    </div>
+                                                </a>
+                                                <div class="furniture-card-rating">
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                </div>
+                                                <div class="furniture-card-price">$122</div>
+                                                <div class="add-to-cart">
+                                                    <div class="blackbox-cart">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_5_2.png" alt="furniture">
+                                            </div>
+                                            <div class="furniture-card-info">
+                                                <a href="navbar.html">
+                                                    <div class="furniture-card-title">
+                                                        Diamond Halo Stud Chair
+                                                    </div>
+                                                </a>
+                                                <div class="furniture-card-rating">
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                </div>
+                                                <div class="furniture-card-price">$122</div>
+                                                <div class="add-to-cart">
+                                                    <div class="blackbox-cart">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_6_2.png" alt="furniture">
+                                            </div>
+                                            <div class="furniture-card-info">
+                                                <a href="navbar.html">
+                                                    <div class="furniture-card-title">
+                                                        Diamond Halo Stud Chair
+                                                    </div>
+                                                </a>
+                                                <div class="furniture-card-rating">
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                </div>
+                                                <div class="furniture-card-price">$122</div>
+                                                <div class="add-to-cart">
+                                                    <div class="blackbox-cart">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_7_2.png" alt="furniture">
+                                            </div>
+                                            <div class="furniture-card-info">
+                                                <a href="navbar.html">
+                                                    <div class="furniture-card-title">
+                                                        Diamond Halo Stud Chair
+                                                    </div>
+                                                </a>
+                                                <div class="furniture-card-rating">
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                </div>
+                                                <div class="furniture-card-price">$122</div>
+                                                <div class="add-to-cart">
+                                                    <div class="blackbox-cart">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                        <div id="controls4">
+                            <button class="previous4"><i class="fa-solid fa-arrow-left"></i></button>
+                            <button class="next4"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="slider-container hidden">
+                        <ul class="slider5 furniture-item">
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a class="furniture-card-image" href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_2_2.png" alt="furniture">
+                                            </div>
+                                        </a>
+                                        <div class="furniture-card-info">
+                                            <a href="navbar.html">
+                                                <div class="furniture-card-title">
+                                                    Diamond Halo Stud Chair
+                                                </div>
+                                            </a>
+                                            <div class="furniture-card-rating">
+                                                <i class="fa-solid fa-star hidden"></i>
+                                                <i class="fa-solid fa-star hidden"></i>
+                                                <i class="fa-solid fa-star hidden"></i>
+                                                <i class="fa-solid fa-star hidden"></i>
+                                            </div>
+                                            <div class="furniture-card-price">$122</div>
+                                            <div class="add-to-cart">
+                                                <div class="blackbox-cart">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_3_2.png" alt="furniture">
+                                            </div>
+                                            <div class="furniture-card-info">
+                                                <a href="navbar.html">
+                                                    <div class="furniture-card-title">
+                                                        Diamond Halo Stud Chair
+                                                    </div>
+                                                </a>
+                                                <div class="furniture-card-rating">
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                </div>
+                                                <div class="furniture-card-price">$122</div>
+                                                <div class="add-to-cart">
+                                                    <div class="blackbox-cart">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_4_2.png" alt="furniture">
+                                            </div>
+                                            <div class="furniture-card-info">
+                                                <a href="navbar.html">
+                                                    <div class="furniture-card-title">
+                                                        Diamond Halo Stud Chair
+                                                    </div>
+                                                </a>
+                                                <div class="furniture-card-rating">
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                </div>
+                                                <div class="furniture-card-price">$122</div>
+                                                <div class="add-to-cart">
+                                                    <div class="blackbox-cart">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_5_2.png" alt="furniture">
+                                            </div>
+                                            <div class="furniture-card-info">
+                                                <a href="navbar.html">
+                                                    <div class="furniture-card-title">
+                                                        Diamond Halo Stud Chair
+                                                    </div>
+                                                </a>
+                                                <div class="furniture-card-rating">
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                </div>
+                                                <div class="furniture-card-price">$122</div>
+                                                <div class="add-to-cart">
+                                                    <div class="blackbox-cart">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_6_2.png" alt="furniture">
+                                            </div>
+                                            <div class="furniture-card-info">
+                                                <a href="navbar.html">
+                                                    <div class="furniture-card-title">
+                                                        Diamond Halo Stud Chair
+                                                    </div>
+                                                </a>
+                                                <div class="furniture-card-rating">
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                </div>
+                                                <div class="furniture-card-price">$122</div>
+                                                <div class="add-to-cart">
+                                                    <div class="blackbox-cart">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slide2">
+                                <div class="furniture-card">
+                                    <div class="item">
+                                        <a href="navbar.html">
+                                            <div class="item-image">
+                                                <img class="" src="./furniture2/insidehome_7_2.png" alt="furniture">
+                                            </div>
+                                            <div class="furniture-card-info">
+                                                <a href="navbar.html">
+                                                    <div class="furniture-card-title">
+                                                        Diamond Halo Stud Chair
+                                                    </div>
+                                                </a>
+                                                <div class="furniture-card-rating">
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                    <i class="fa-solid fa-star hidden"></i>
+                                                </div>
+                                                <div class="furniture-card-price">$122</div>
+                                                <div class="add-to-cart">
+                                                    <div class="blackbox-cart">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div id="controls5">
+                            <button class="previous5"><i class="fa-solid fa-arrow-left"></i></button>
+                            <button class="next5"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+
+
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 
