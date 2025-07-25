@@ -246,3 +246,31 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  
+  dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', function() {
+          const content = this.nextElementSibling;
+          const isActive = this.classList.contains('active');
+          
+          // Close all other dropdowns
+          dropdownToggles.forEach(otherToggle => {
+              if (otherToggle !== this) {
+                  otherToggle.classList.remove('active');
+                  otherToggle.nextElementSibling.classList.remove('active');
+              }
+          });
+          
+          // Toggle current dropdown
+          if (isActive) {
+              this.classList.remove('active');
+              content.classList.remove('active');
+          } else {
+              this.classList.add('active');
+              content.classList.add('active');
+          }
+      });
+  });
+});
